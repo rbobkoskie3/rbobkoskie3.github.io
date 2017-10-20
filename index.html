@@ -11,6 +11,24 @@ title: Math, Sonification, Plots
 	
 	<p>This example demonstrates how to assign an "onclick" event to the window object.</p>
 	<p>Click anywhere in this window to change the background color of body.</p>
-	<script>window.onclick = myFunction;
-	function myFunction() {    document.getElementsByTagName("BODY")[0].style.backgroundColor = "yellow";}</script>
+	<script>
+	window.onclick = myFunction;
+	function myFunction() {
+		document.getElementsByTagName("BODY")[0].style.backgroundColor = "yellow";
+	}
+	</script>
+	
+	<input type="button" name="Ignore Select" value="Ignore Select" id="select" onclick="colorchange('select')" style="background:rgb(255,145,0);"/>
+	<input type="button" name="Ignore Delete" value="Ignore Delete" id="select1" onclick="colorchange('select1');" style="background:rgb(255,145,0);"/> 
+	<script>
+	function colorchange(id) {
+		var background = document.getElementById(id).style.background;
+		if (background == "rgb(255,145,0)") {
+	   		document.getElementById(id).style.background = "rgb(26,255,0)";
+	   	}
+  	   	if (background == "rgb(26,255,0)") {
+			document.getElementById(id).style.background = "rgb(255,145,0)";
+  		}
+	}
+	</script>
 </div><!-- /.blurb -->
