@@ -5,6 +5,16 @@ title: Math, Sonification, Plots
 <div class="blurb">
 
         <img src="\images\ST_Circle.png">
+        
+        <script>
+                function play(){
+                var audio = document.getElementById("audio");
+                audio.play();
+                }
+        </script>
+        <input type="button" value="SONIFICATION"  onclick="play()">
+        <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
+        
         <button id="myButton" class="float-left submit-button" >SONIFICATION</button>
         <script>
         document.getElementById("myButton").onclick = function () {
