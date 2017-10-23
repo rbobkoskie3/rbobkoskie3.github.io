@@ -25,31 +25,30 @@ title: Math, Sonification, Plots
         <img src="\images\HC_Circle.png">
         
       h2 class="mb-3 f2-light lh-condensed">Contact Professional Services</h2>
-      <form id="eloquaForm" name="ContactUs_ServicesForm" method="post" action="https://s88570519.t.eloqua.com/e/f2" novalidate="">
-        <input value="ContactUs_ServicesForm" type="hidden" name="elqFormName">
-        <input value="88570519" type="hidden" name="elqSiteId">
-        <input name="elqCampaignId" type="hidden">
-
           <div class="mb-3">
           <label for="field0" class="d-inline-block mb-1">Full name</label>
+                  
           <input id="field0" name="fullName1" type="text" class="form-control form-control-lg input-block" placeholder="First and last name" required="">
           <span class="form-control-invalid-text">Your full name is required.</span>
         </div>
 
         <div class="mb-3">
           <label for="field1" class="d-inline-block mb-1">Email address</label>
+                
           <input id="field1" name="emailAddress" type="email" class="form-control form-control-lg input-block" placeholder="you@example.com" required="">
           <span class="form-control-invalid-text">A valid email address is required.</span>
         </div>
 
         <div class="mb-3">
           <label for="field2" class="d-inline-block mb-1">Company</label>
+                
           <input id="field2" name="company" type="text" class="form-control form-control-lg input-block" placeholder="Acme, Inc" required="">
           <span class="form-control-invalid-text">A valid company name is required.</span>
         </div>
 
         <div class="mb-3">
           <label for="field5" class="d-inline-block mb-1">What can we help you with?</label>
+                
           <textarea id="field5" name="contactComments" type="text" class="form-control form-control-lg input-block" rows="4" placeholder="Tell us how we can help. For support questions, head to github.com/contact" maxlength="1000" required=""></textarea>
           <span class="form-control-invalid-text">A valid comment is required.</span>
         </div>
@@ -61,31 +60,8 @@ title: Math, Sonification, Plots
         <input id="field6" type="hidden" name="city" value="">
         <input type="hidden" name="elqCustomerGUID" value="">
         <input type="hidden" name="elqCookieWrite" value="0">
-        <input id="field7" type="hidden" name="sfcampaignid" value="2018q2-ww-Services-Contact">
+        <input id="field7" type="hidden" name="sfcampaignid" value="rb868x@att.com">
         <input id="field8" type="hidden" name="source" value="/"">
       </form>
       
-      
-      script type='text/javascript'>
-        jQuery('#search_in_header').live('submit', searchSubmit);
-        function searchSubmit(e) {
-                var txt = document.forms['search_in_header'].getElementById('mod-search-searchword').value;
-                txt = txt.replace('httpd.conf','httpdconf');
-                document.forms['search_in_header'].getElementById('mod-search-searchword').value = txt;
-        }
-      </script>
-
-      <script type='text/javascript'>
-        var DfixComments = jQuery('#fixComments');
-        var vTop = DfixComments.offset().top - parseFloat(DfixComments.css('margin-top').replace(/auto/, 0));
-        jQuery(window).scroll(function (event) {
-                var y = jQuery(this).scrollTop();
-                if (y >= vTop) {
-                        DfixComments.css({'position': 'fixed', 'top': '10px','right': '50%','margin': '0px -455px 0px 0px'});
-                } else {
-                        DfixComments.css({'position': 'relative', 'top': 'auto'});
-                }
-        });
-      </script>
-
 <!-- /.blurb -->
