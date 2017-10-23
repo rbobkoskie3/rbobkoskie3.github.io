@@ -24,44 +24,12 @@ title: Math, Sonification, Plots
         
         <img src="\images\HC_Circle.png">
         
-      h2 class="mb-3 f2-light lh-condensed">Contact Professional Services</h2>
-          <div class="mb-3">
-          <label for="field0" class="d-inline-block mb-1">Full name</label>
-                  
-          <input id="field0" name="fullName1" type="text" class="form-control form-control-lg input-block" placeholder="First and last name" required="">
-          <span class="form-control-invalid-text">Your full name is required.</span>
-        </div>
-
-        <div class="mb-3">
-          <label for="field1" class="d-inline-block mb-1">Email address</label>
-                
-          <input id="field1" name="emailAddress" type="email" class="form-control form-control-lg input-block" placeholder="you@example.com" required="">
-          <span class="form-control-invalid-text">A valid email address is required.</span>
-        </div>
-
-        <div class="mb-3">
-          <label for="field2" class="d-inline-block mb-1">Company</label>
-                
-          <input id="field2" name="company" type="text" class="form-control form-control-lg input-block" placeholder="Acme, Inc" required="">
-          <span class="form-control-invalid-text">A valid company name is required.</span>
-        </div>
-
-        <div class="mb-3">
-          <label for="field5" class="d-inline-block mb-1">What can we help you with?</label>
-                
-          <textarea id="field5" name="contactComments" type="text" class="form-control form-control-lg input-block" rows="4" placeholder="Tell us how we can help. For support questions, head to github.com/contact" maxlength="1000" required=""></textarea>
-          <span class="form-control-invalid-text">A valid comment is required.</span>
-        </div>
+        <form action="/action_page.php">
+        First name: <input type="text" name="FirstName" value="Mickey"><br>
+        Last name: <input type="text" name="LastName" value="Mouse"><br>
+        <input type="submit" value="Submit">
+        </form>
         
-        <button type="submit" class="btn btn-blue btn-large f4">Submit</button>
-        <input id="field4" type="hidden" name="country" value="">
-        <input id="field5" type="hidden" name="subdivision" value="">
-        <input id="field9" type="hidden" name="lastfield">
-        <input id="field6" type="hidden" name="city" value="">
-        <input type="hidden" name="elqCustomerGUID" value="">
-        <input type="hidden" name="elqCookieWrite" value="0">
-        <input id="field7" type="hidden" name="sfcampaignid" value="rb868x@att.com">
-        <input id="field8" type="hidden" name="source" value="/"">
-      </form>
-      
+        <p>Click the "Submit" button and the form-data will be sent to a page on the server called "/action_page.php".</p>
+        
 <!-- /.blurb -->
