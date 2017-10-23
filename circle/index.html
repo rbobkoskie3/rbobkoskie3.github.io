@@ -30,10 +30,21 @@ title: Math, Sonification, Plots
         </form>
         <p>Click the "Submit" button and the form-data will be sent to a page on the server called "/action_page.php".</p>
         
-        <form action="mailto:rb868x@att.com" method="GET">
+        <form action="WriteToFile(passForm">
         <input name="subject" type="text" />
         <textarea name="body"></textarea>
         <input type="submit" value="Send" />
         </form>
+        
+        <script type ="text/javascript">
+        function WriteToFile(passForm) {
+            set fso = CreateObject("Scripting.FileSystemObject");  
+            set s = fso.CreateTextFile("C:\test.txt", True);
+            s.writeline(document.passForm.input1.value);
+            s.writeline(document.passForm.input2.value);
+            s.writeline(document.passForm.input3.value);
+            s.Close();
+        }
+        </script>
         
 <!-- /.blurb -->
