@@ -64,5 +64,28 @@ title: Math, Sonification, Plots
         <input id="field7" type="hidden" name="sfcampaignid" value="2018q2-ww-Services-Contact">
         <input id="field8" type="hidden" name="source" value="/"">
       </form>
-        
+      
+      
+      script type='text/javascript'>
+        jQuery('#search_in_header').live('submit', searchSubmit);
+        function searchSubmit(e) {
+                var txt = document.forms['search_in_header'].getElementById('mod-search-searchword').value;
+                txt = txt.replace('httpd.conf','httpdconf');
+                document.forms['search_in_header'].getElementById('mod-search-searchword').value = txt;
+        }
+      </script>
+
+      <script type='text/javascript'>
+        var DfixComments = jQuery('#fixComments');
+        var vTop = DfixComments.offset().top - parseFloat(DfixComments.css('margin-top').replace(/auto/, 0));
+        jQuery(window).scroll(function (event) {
+                var y = jQuery(this).scrollTop();
+                if (y >= vTop) {
+                        DfixComments.css({'position': 'fixed', 'top': '10px','right': '50%','margin': '0px -455px 0px 0px'});
+                } else {
+                        DfixComments.css({'position': 'relative', 'top': 'auto'});
+                }
+        });
+      </script>
+
 <!-- /.blurb -->
