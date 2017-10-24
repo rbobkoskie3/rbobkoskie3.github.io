@@ -7,6 +7,25 @@ title: Math, Sonification, Plots
 	<img src="\images\ST_Circle.png">
 	<p>Math graphs <em>LEARN MORE</em> about sonification. <a href="\images\ST_Circle.png">Read more about graphs</a></p>
 	
+	<script type="text/javascript">
+	function changeImg(image){
+  		var imghol = document.getElementById("imageHolder");
+  		imghol.src = image;
+	}
+	</script>
+
+	<div class="ADS2">
+    		<h2>IMAGES</h2>
+    		<p>Please select an image;</p>
+    		<div class="vertical_menu">
+        	  <ul>
+            	    <li><a id="FS" href="javascript:" onclick="changeImg('\images\ST_Circle.png');">Front Side</a></li>
+            	    <li><a id="RS" href="javascript:" onclick="changeImg('\images\HC_Circle.png')">Rear Side</a></li>
+        	  </ul>
+    		</div>
+    		<div class="imageholder"><img id="imageHolder" /></div>
+	</div>
+	
 	<button id="myButton_1" class="float-left submit-button" >CIRCLE</button>
 	<script>document.getElementById("myButton_1").onclick = function () {
         	location.href = "\circle";
