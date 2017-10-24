@@ -47,10 +47,11 @@ title: Math, Sonification, Plots
 	}
 	</script>
 	
-	<input type="button" name="BLACK" value="Ignore Delete" id="select1" onclick="changeColor();" style="background:rgb(0,0,0);"/> 
+	<!-- input type="button" name="BLACK" value="Ignore Delete" id="select1" onclick="changeColor();" style="background:rgb(0,0,0);"/ --> 
+	<input type="button" name="BLACK" onclick="changeColor();" style="background:#4CAF50; font-weight:bold; color:yellow;"/> 
 	<script>
 	var count = 1;
-	function changeColorolor() {
+	function changeColor() {
 		var property = document.getElementById(btn);
 		if (count == 0) {
 			property.style.backgroundColor = "#FFFFFF"
