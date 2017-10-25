@@ -21,7 +21,7 @@ title: Math, Sonification, Plots
 </head>
 
 <div class="circle_class">
-        <img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast">
+        <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
@@ -30,5 +30,10 @@ title: Math, Sonification, Plots
                 var audio = document.getElementById("audio");
                 audio.play();
                 }
+
+                var onImg= "\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast";
+                var offImg= "\images\HC_Circle.png" title="Graph of a Circle with High Contrast";
         </script>
+
+        <img src="on.jpg" onclick="this.src = this.src == offImg ? onImg : offImg;"/>
 </div>
