@@ -8,6 +8,7 @@ ttitle: Math, Sonification, Plots
     background-color: #4CAF50; /* Green background */
     border: 1px solid green; /* Green border */
     color: white; /* White text */
+    font-weight: bold;
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     float: left; /* Float the buttons side by side */
@@ -33,13 +34,15 @@ ttitle: Math, Sonification, Plots
 
 <div class="btn-group">
     <button>SONIFICATION</button>
-    <button>HIGH CONTRAST</button>
-    <button>STRD CONTRAST</button>
-    <button type="button" onclick="setBG_Black()">TEST HCS</button>
+    <button type="button" onclick="setBG_Black()">HIGH CONTRAST</button>
+    <button type="button" onclick="setBG_White()">STRD CONTRAST</button>
 </div>
 
 <script>
     function setBG_Black() {
         document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+    }
+    function setBG_Black() {
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
     }
 </script>
