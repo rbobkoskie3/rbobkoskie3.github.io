@@ -13,8 +13,8 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 a {
-    font-style: italic;
-    font-weight: bold;
+    text-decoration: none;
+    color: #00FFFF;
 }
 a:hover {
     text-decoration: underline;
