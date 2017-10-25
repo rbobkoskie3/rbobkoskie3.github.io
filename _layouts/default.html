@@ -5,25 +5,8 @@
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>		        
-	        		<li><a href="/about">About Project</a></li>	        	
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			<h1>Math Plots</h1>
-			<nav>
-			<ul>
-				<li><a href="/circle">CIRCLES</a></li>
-			</ul>
-			</nav>
 
-			<style>
+		<style>
 			div { 
                             text-align: justify; 
                             text-justify: inter-word; 
@@ -53,10 +36,21 @@
                         .btn-group button:hover {
                             background-color: #3e8e41;
                         }
-                        </style>
-
+                </style>
+                        
+		<body>
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>		        
+	        		<li><a href="/about">About Project</a></li>	        	
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			{{ content }}
+			
                         <div><p>
-                        Select High Contrast, or Standard contrast for page.
+                        Select High Contrast, or Standard contrast for the webpage.
                         </div></p>
 
                         <div class="btn-group">
@@ -76,10 +70,26 @@
                         </script>
 			
 			</div><!-- /.container -->
+                        <br>
 
-                        <br><br><br>
+                        <h1>Math Plots</h1>
+			<nav>
+			<ul>
+				<li><a href="/circle">CIRCLES</a></li>
+			</ul>
+			</nav>
+			<br><br><br>
+                        
 			<footer>
 	    		<ul>
+                                <p>Comments can be entered "Anonymously".</p>    
+                                <!-- begin wwww.htmlcommentbox.com -->
+                                  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
+                                  <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+                                  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24ndx59On.x2Zb5qyz%2FqFCZ1"+"&opts=16862&num=10&ts=1508847673018");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+                                <!-- end www.htmlcommentbox.com -->
+                                <br><br><br>
+                                
 	        		<!-- <li><a href="mailto:rbobkoskie3@gatech.edu">email</a></li> -->			
 				<p>If there are any additional feedback, enter in textbox and click "Send".</p>
 				<form action="mailto:rbobkoskie3@gatech.edu" method="GET">
