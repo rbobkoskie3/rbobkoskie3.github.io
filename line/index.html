@@ -3,11 +3,43 @@ layout: default
 ttitle: Math, Sonification, Plots
 ---
 
-    <a href="#" onclick="changeDivImage()">change</a>
+<style>
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
 
-    body { background-color: #FFFFFF; }
-    body.on { background-color: #000000; }
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
-    function changeDivImage() {
-        $("body").toggleClass("on");
+.btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+</style>
+
+<h1>Button Group</h1>
+
+<div class="btn-group">
+    <button>SONIFICATION</button>
+    <button>HIGH CONTRAST</button>
+    <button>STRD CONTRAST</button>
+</div>
+
+<script>
+    window.onclick = myFunction;
+    function myFunction() {
+        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
     }
+</script>
