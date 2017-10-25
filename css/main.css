@@ -14,8 +14,6 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    font-weight: bold;
-    font-style: italic;
 }
 a:hover {
     text-decoration: underline;
