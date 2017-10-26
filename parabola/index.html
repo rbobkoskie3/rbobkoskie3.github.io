@@ -40,14 +40,12 @@ title: Math, Sonification, Plots
         
         <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Parabola.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change_1();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change_1();"/>
         <script>
-                
-  
                 function change_1() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Parabola.png",
                             img2 = "https://rbobkoskie3.github.io/images/HC_Parabola.png";
-                        var imgElement = document.getElementById('test');
+                        var imgElement = document.getElementById('img_1');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
@@ -71,14 +69,12 @@ title: Math, Sonification, Plots
         </script>
 
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Neg_Parabola.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change_2();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_2" onclick = "change_2();"/>
         <script>
-                
-  
                 function change_2() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Parabola.png",
                             img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Parabola.png";
-                        var imgElement = document.getElementById('test');
+                        var imgElement = document.getElementById('img_2');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
@@ -100,5 +96,4 @@ title: Math, Sonification, Plots
                         }
                 }
         </script>
-
 </div>
