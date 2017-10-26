@@ -40,7 +40,7 @@ title: Math, Sonification, Plots
         
         <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Parabola.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change_1();"/>
         <script>
                 function set_body_height() { // set body height = window height
                         $('body').height($(window).height());
@@ -50,14 +50,14 @@ title: Math, Sonification, Plots
                         set_body_height();
                 });
   
-                function change() {
+                function change_1() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Parabola.png",
                             img2 = "https://rbobkoskie3.github.io/images/HC_Parabola.png";
                         var imgElement = document.getElementById('test');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
-        
+
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio_1" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
         
@@ -77,7 +77,7 @@ title: Math, Sonification, Plots
         </script>
 
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Neg_Parabola.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change_2();"/>
         <script>
                 function set_body_height() { // set body height = window height
                         $('body').height($(window).height());
@@ -87,7 +87,7 @@ title: Math, Sonification, Plots
                         set_body_height();
                 });
   
-                function change() {
+                function change_2() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Parabola.png",
                             img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Parabola.png";
                         var imgElement = document.getElementById('test');
