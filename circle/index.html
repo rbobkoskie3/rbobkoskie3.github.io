@@ -23,11 +23,14 @@ title: Math, Sonification, Plots
 <div class="circle_class">
         <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
         
-        <img src="https://rbobkoskie3.github.io/images/ST_Circle.png" id="test" onclick = "change();"/>
+        <img src="https://rbobkoskie3.github.io/images/ST_Circle.png"
+             title="Graph of a Circle w/o High Contrast" id="test" onclick = "change();"/>
         <script>
                 function change() {
-                        var img1 = "https://rbobkoskie3.github.io/images/ST_Circle.png",
-                            img2 = "https://rbobkoskie3.github.io/images/HC_Circle.png";
+                        var img1 = "https://rbobkoskie3.github.io/images/ST_Circle.png"
+                                    title="Graph of a Circle w/o High Contrast",
+                            img2 = "https://rbobkoskie3.github.io/images/HC_Circle.png"
+                                    title="Graph of a Circle with High Contrast";
                         var imgElement = document.getElementById('test');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
@@ -35,8 +38,9 @@ title: Math, Sonification, Plots
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
-        var isPlaying = false
+        
         <script>
+                var isPlaying = false
                 function play() {
                         var audio = document.getElementById("audio");
                         if (!isPlaying) {
