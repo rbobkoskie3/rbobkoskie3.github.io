@@ -17,20 +17,24 @@ title: Math, Sonification, Plots
                 font-weight: bold;
                 margin: 4px 2px;
                 cursor: pointer;}
+                
+        div {
+                text-align: justify;
+                text-justify: inter-word;
+            }
         </style>
 </head>
 
 <div class="circle_class">
         <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
         
+        <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
         <img src="https://rbobkoskie3.github.io/images/ST_Circle.png"
-             title="Graph of a Circle w/o High Contrast" id="test" onclick = "change();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
         <script>
                 function change() {
-                        var img1 = ""https://rbobkoskie3.github.io/images/ST_Circle.png"
-                                    title="Graph of a Circle w/o High Contrast"",
-                            img2 = ""https://rbobkoskie3.github.io/images/HC_Circle.png"
-                                    title="Graph of a Circle with High Contrast"";
+                        var img1 = "https://rbobkoskie3.github.io/images/ST_Circle.png",
+                            img2 = "https://rbobkoskie3.github.io/images/HC_Circle.png";
                         var imgElement = document.getElementById('test');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
