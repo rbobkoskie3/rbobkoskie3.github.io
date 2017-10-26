@@ -23,6 +23,7 @@ title: Math, Sonification, Plots
 <div class="circle_class">
         <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
         
+        <img src="https://rbobkoskie3.github.io/images/HC_Hyperbola.png" id="test" onclick = "change();"/>
         <script>
                 function change() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Parabola.png",
@@ -31,7 +32,6 @@ title: Math, Sonification, Plots
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
-        <img src="https://rbobkoskie3.github.io/images/HC_Hyperbola.png" id="test" onclick = "change();"/>
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
@@ -41,12 +41,5 @@ title: Math, Sonification, Plots
                 audio.play();
                 }
         </script>
-  
-        <img src="\images\ST_Circle.png" name="pic" onclick="window.document.pic.src='\images\HC_Circle.png';"/>
-        <script>
-                var onImg= "\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast";
-                var offImg= "\images\HC_Circle.png" title="Graph of a Circle with High Contrast";
-        </script>
-
-        <img src="on.jpg" onclick="this.src = this.src == offImg ? onImg : offImg;"/>
+        
 </div>
