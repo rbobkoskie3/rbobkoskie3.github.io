@@ -39,7 +39,7 @@ title: Math, Sonification, Plots
         <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
         
         <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
-        <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Circle.png"
+        <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png"
              title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
         <script>
                 function set_body_height() { // set body height = window height
@@ -51,8 +51,8 @@ title: Math, Sonification, Plots
                 });
   
                 function change() {
-                        var img1 = "https://rbobkoskie3.github.io/images/ST_Circle.png",
-                            img2 = "https://rbobkoskie3.github.io/images/HC_Circle.png";
+                        var img1 = "https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png",
+                            img2 = "https://rbobkoskie3.github.io/images/HC_3D_Hyperbola.png";
                         var imgElement = document.getElementById('test');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
