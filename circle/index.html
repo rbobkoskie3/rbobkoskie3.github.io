@@ -4,7 +4,7 @@ title: Math, Sonification, Plots
 ---
 
 <head>
-  <style>
+        <style>
         .button {
                 background-color: #000000;
                 border: none;
@@ -17,12 +17,28 @@ title: Math, Sonification, Plots
                 font-weight: bold;
                 margin: 4px 2px;
                 cursor: pointer;}
-  </style>
+        </style>
 </head>
 
 <div class="circle_class">
         <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
         
+        <style>
+               .expand {
+                content:url("http://site.com/expand.gif");
+        }
+        .collapse {
+                content:url("http://site.com/collapse.gif");
+        }
+        </style>
+
+        <img class="expand">
+        <script>
+                // onclick code
+                $('img.expand').toggleClass('collapse');
+        </script>
+  
+  
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
         <script>
