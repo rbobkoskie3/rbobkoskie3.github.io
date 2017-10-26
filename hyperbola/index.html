@@ -40,12 +40,12 @@ title: Math, Sonification, Plots
         
         <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change();"/>
         <script>
                 function change() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png",
                             img2 = "https://rbobkoskie3.github.io/images/HC_3D_Hyperbola.png";
-                        var imgElement = document.getElementById('test');
+                        var imgElement = document.getElementById('img_1');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
