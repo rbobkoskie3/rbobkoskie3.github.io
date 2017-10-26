@@ -59,12 +59,12 @@ title: Math, Sonification, Plots
         </script>
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
-        <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
+        <audio id="audio_1" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
         
         <script>
                 var isPlaying = false
                 function play() {
-                        var audio = document.getElementById("audio");
+                        var audio = document.getElementById("audio_1");
                         if (!isPlaying) {
                                 audio.play();
                                 isPlaying = true
@@ -75,5 +75,42 @@ title: Math, Sonification, Plots
                         }
                 }
         </script>
+
+        <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Neg_Parabola.png"
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
+        <script>
+                function set_body_height() { // set body height = window height
+                        $('body').height($(window).height());
+                }
+                $(document).ready(function() {
+                        $(window).bind('resize', set_body_height);
+                        set_body_height();
+                });
+  
+                function change() {
+                        var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Parabola.png",
+                            img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Parabola.png";
+                        var imgElement = document.getElementById('test');
+                        imgElement.src = (imgElement.src === img1)? img2 : img1;
+                }
+        </script>
         
+        <input type="button" class="button" value="SONIFICATION"  onclick="play()">
+        <audio id="audio_2" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
+        
+        <script>
+                var isPlaying = false
+                function play() {
+                        var audio = document.getElementById("audio_2");
+                        if (!isPlaying) {
+                                audio.play();
+                                isPlaying = true
+                        }
+                        else {
+                                audio.pause();
+                                isPlaying = false
+                        }
+                }
+        </script>
+
 </div>
