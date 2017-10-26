@@ -35,10 +35,17 @@ title: Math, Sonification, Plots
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
+        var isPlaying = false
         <script>
-                function play(){
-                var audio = document.getElementById("audio");
-                audio.play();
+                function play() {
+                        var audio = document.getElementById("audio");
+                        if (!isPlaying) {
+                                audio.play();
+                                isPlaying = true
+                        }
+                        else {
+                                audio.pause();
+                                isPlaying = false
                 }
         </script>
         
