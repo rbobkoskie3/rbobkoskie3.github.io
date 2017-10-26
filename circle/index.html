@@ -40,12 +40,20 @@ title: Math, Sonification, Plots
         
         <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Circle.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change();"/>
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
         <script>
+                function set_body_height() { // set body height = window height
+                        $('body').height($(window).height());
+                }
+                $(document).ready(function() {
+                        $(window).bind('resize', set_body_height);
+                        set_body_height();
+                });
+  
                 function change() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Circle.png",
                             img2 = "https://rbobkoskie3.github.io/images/HC_Circle.png";
-                        var imgElement = document.getElementById('img_1');
+                        var imgElement = document.getElementById('test');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
@@ -67,4 +75,5 @@ title: Math, Sonification, Plots
                         }
                 }
         </script>
+        
 </div>
