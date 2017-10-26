@@ -25,31 +25,14 @@ title: Math, Sonification, Plots
         
         <script>
                 function change() {
-                        var img1 = "https://rbobkoskie3.github.io/images/ST_Circle.png",
-                            img2 = "https://rbobkoskie3.github.io/images/HC_Circle.png";
+                        var img1 = "https://rbobkoskie3.github.io/images/ST_Parabola.png",
+                            img2 = "https://rbobkoskie3.github.io/images/HC_Hyperbola.png";
                         var imgElement = document.getElementById('test');
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
-        <img src="http://placehold.it/350x150" id="test" onclick = "change();"/>
+        <img src="https://rbobkoskie3.github.io/images/HC_Hyperbola.png" id="test" onclick = "change();"/>
         
-        
-        <style>
-               .expand {
-                content:url("https://rbobkoskie3.github.io/images/S_Circle.png");
-        }
-        .collapse {
-                content:url("https://rbobkoskie3.github.io/images/S_Circle.png");
-        }
-        </style>
-
-        <img class="expand">
-        <script>
-                // onclick code
-                $('img.expand').toggleClass('collapse');
-        </script>
-  
-  
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
         <script>
