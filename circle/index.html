@@ -54,25 +54,23 @@ title: Math, Sonification, Plots
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
         
         <script>
+                <p>PLAYING</p>
                 var isPlaying = false
                 function play() {
                         var audio = document.getElementById("audio");
-                        
+                        audio.volume = 0.9;
                         if (!isPlaying) {
                                 audio.play();
                                 isPlaying = true
-                                <p>PLAYING</p>
                         }
                         else {
                                 if (!audio.currentTime.ended) {
                                     audio.pause();
                                     isPlaying = true
-                                    <p>PAUSED ...</p>
                                 }
                                 else {
                                     audio.load();
                                     isPlaying = false
-                                    <p>re LOAD</p>
                                 }
                         }
                 }
