@@ -64,14 +64,14 @@ title: Math, Sonification, Plots
                                 <p>PLAYING</p>
                         }
                         else {
-                                isPlaying = false;
-                                if (!audio.currentTime.ended) {
+                                if (!audio.currentTime.ended()) {
                                     audio.pause();
-                                    isPlaying = false;
+                                    isPlaying = true;
                                     <p>PAUSED ...</p>
                                 }
                                 else {
                                     audio.load();
+                                    isPlaying = false;
                                     <p>re LOAD</p>
                                 }
                         }
