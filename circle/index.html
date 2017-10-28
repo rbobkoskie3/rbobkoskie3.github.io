@@ -57,23 +57,13 @@ title: Math, Sonification, Plots
                 var isPlaying = false
                 function play() {
                         var audio = document.getElementById("audio");
-                        audio.volume = 0.9;
                         if (!isPlaying) {
                                 audio.play();
                                 isPlaying = true
-                                <p>PLAYING</p>
                         }
                         else {
-                                if (!audio.currentTime.ended) {
-                                    audio.pause();
-                                    isPlaying = true
-                                    <p>PAUSED ...</p>
-                                }
-                                else {
-                                    audio.load();
-                                    isPlaying = false
-                                    <p>re LOAD</p>
-                                }
+                                audio.pause();
+                                isPlaying = false
                         }
                 }
         </script>
