@@ -51,21 +51,23 @@ title: Math, Sonification, Plots
         </script>
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
-        <audio id="audio" src="https://rbobkoskie3.github.io/sounds/circle.mp4" ></audio>
+        <audio id="audio" src="https://rbobkoskie3.github.io/sounds/440.wav" ></audio>
         
         <script>
                 var isPlaying = false
                 function play() {
                         var audio = document.getElementById("audio");
+                        audio.volume = 0.1;
                         if (!isPlaying) {
                                 audio.play();
-                                isPlaying = true
+                                isPlaying = true;
                         }
-                        else {
-                                audio.currentTime = 0
+                        else if (!audio.currentTime.ended) {
                                 audio.pause();
-                                isPlaying = false
+                                isPlaying = false;
                         }
+                        else
+                                audio.load();
                 }
         </script>
 </div>
