@@ -60,19 +60,19 @@ title: Math, Sonification, Plots
                         audio.volume = 0.4;
                         if (!isPlaying) {
                                 audio.play();
-                                isPlaying = true
                                 <p>PLAYING</p>;
+                                isPlaying = true
                         }
                         else {
                                 if (!audio.ended) {
                                     audio.pause();
-                                    isPlaying = true
                                     <p>PAUSE ...</p>;
+                                    isPlaying = true
                                 }
                                 else {
                                     audio.load();
-                                    isPlaying = false
                                     <p>ENDED</p>;
+                                    isPlaying = false
                                 }
                         }
                 }
