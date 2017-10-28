@@ -63,8 +63,14 @@ title: Math, Sonification, Plots
                                 isPlaying = true
                         }
                         else {
-                                audio.pause();
-                                isPlaying = false
+                                if (!audio.ended) {
+                                    audio.pause();
+                                    isPlaying = true
+                                }
+                                else {
+                                    audio.load();
+                                    isPlaying = false
+                                }
                         }
                 }
         </script>
