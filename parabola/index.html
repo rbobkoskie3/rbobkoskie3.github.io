@@ -56,19 +56,19 @@ title: Math, Sonification, Plots
         <script>
                 var isPlaying = false
                 function play_1() {
-                        var audio1 = document.getElementById("audio_1");
-                        audio1.volume = 0.4;
+                        var audio = document.getElementById("audio_1");
+                        audio.volume = 0.4;
                         if (!isPlaying) {
-                                audio1.play();
+                                audio.play();
                                 isPlaying = true
                         }
                         else {
-                                if (!audio1.ended) {
-                                    audio1.pause();
+                                if (!audio.ended) {
+                                    audio.pause();
                                     isPlaying = false
                                 }
                                 else {
-                                    audio1.play();
+                                    audio.play();
                                     isPlaying = true
                                 }
                         }
@@ -92,19 +92,19 @@ title: Math, Sonification, Plots
         <script>
                 var isPlaying = false
                 function play_2() {
-                        var audio2 = document.getElementById("audio_2");
-                        audio2.volume = 0.4;
+                        var audio = document.getElementById("audio_2");
+                        audio.volume = 0.4;
                         if (!isPlaying) {
-                                audio2.play();
+                                audio.play();
                                 isPlaying = true
                         }
                         else {
-                                if (!audio2.ended) {
-                                    audio2.pause();
+                                if (!audio.ended) {
+                                    audio.pause();
                                     isPlaying = false
                                 }
                                 else {
-                                    audio2.play();
+                                    audio.play();
                                     isPlaying = true
                                 }
                         }
