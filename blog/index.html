@@ -66,7 +66,9 @@ title: Math, Sonification, Plots
         
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/circle.mp4" ></audio>
-        
+        <div id ="myContainer">
+        <div id ="myAnimation"></div>
+        </div>
         <script>
                 var isPlaying = false
                 function play() {
@@ -90,14 +92,16 @@ title: Math, Sonification, Plots
                                 }
                         }
 
-                        if (pos == 350) {
+                        function frame() {
+                            if (pos == 350) {
                                 clearInterval(id);
-                        }
-                        else {
+                            }
+                            else {
                                 pos++; 
                                 elem.style.top = pos + 'px'; 
                                 elem.style.left = pos + 'px'; 
-                        }
+                            }
+                      }
                 }
         </script>
 </div>
