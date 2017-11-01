@@ -97,13 +97,13 @@ title: Math, Sonification, Plots
                         }
 
                         function frame() {
-                            if (pos == 50) {
+                            if (pos == 5000) {
                                 clearInterval(id);
                             }
                             else {
                                 pos++; 
-                                elem.style.top = pos*pos + 'px'; 
-                                elem.style.left = pos*pos + 'px'; 
+                                elem.style.top = pos + 'px'; 
+                                elem.style.left = pos + 'px'; 
                             }
                       }
                 }
