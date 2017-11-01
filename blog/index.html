@@ -51,10 +51,10 @@ title: Math, Sonification, Plots
         </style>
 </head>
 
+    <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
+    <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
+
     <div id="myContainer">
-        <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
-        
-        <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
         <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Circle.png"
              title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change();"/>
         <script>
@@ -65,8 +65,7 @@ title: Math, Sonification, Plots
                         imgElement.src = (imgElement.src === img1)? img2 : img1;
                 }
         </script>
-        
-        <input type="button" class="button" value="SONIFICATION"  onclick="play()">
+
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/circle.mp4" ></audio>
         <div id ="myAnimation"></div>
         </div>
@@ -105,4 +104,5 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
+        <input type="button" class="button" value="SONIFICATION"  onclick="play()">
 
