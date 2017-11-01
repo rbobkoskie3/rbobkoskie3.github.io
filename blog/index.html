@@ -63,6 +63,31 @@ title: Math, Sonification, Plots
                         animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+, 
                                                                 * IE 10+, Safari 5 */
         }
+
+        /*
+         * Set up the keyframes to actually describe the begining and end states of 
+         * the animation.  The browser will interpolate all the frames between these 
+         * points.  Again, remember your vendor-specific prefixes for now!
+         */
+        @-webkit-keyframes myOrbit {
+            from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @-moz-keyframes myOrbit {
+            from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @-o-keyframes myOrbit {
+            from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @keyframes myOrbit {
+            from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
         </style>
 </head>
 
@@ -87,8 +112,10 @@ title: Math, Sonification, Plots
         <script>
                 var isPlaying = false
                 function play() {
-                        
-                        
+                        var elem = document.getElementById("myAnimation");   
+                        var pos = 0;
+                        var id = setInterval(frame, 10);
+                        // var id = setTimeout(frame, 1000);
                         var audio = document.getElementById("audio");
                         audio.volume = 0.4;
                         if (!isPlaying) {
@@ -106,30 +133,16 @@ title: Math, Sonification, Plots
                                 }
                         }
 
-                        /*
-         * Set up the keyframes to actually describe the begining and end states of 
-         * the animation.  The browser will interpolate all the frames between these 
-         * points.  Again, remember your vendor-specific prefixes for now!
-         */
-        @-webkit-keyframes myOrbit {
-            from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-            to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
-        }
-
-        @-moz-keyframes myOrbit {
-            from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-            to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
-        }
-
-        @-o-keyframes myOrbit {
-            from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-            to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
-        }
-
-        @keyframes myOrbit {
-            from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-            to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
-        }
+                        function frame() {
+                            if (pos == 5000) {
+                                clearInterval(id);
+                            }
+                            else {
+                                pos++; 
+                                elem.style.top = pos + 'px'; 
+                                elem.style.left = pos + 'px'; 
+                            }
+                      }
                 }
         </script>
         <input type="button" class="button" value="SONIFICATION"  onclick="play()">
