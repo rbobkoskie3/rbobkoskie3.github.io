@@ -90,9 +90,9 @@ title: Math, Sonification, Plots
         }
 
         .button.play {
-            color: #000000;
+            color: #FFFFFF;
             text-align: left;
-            padding: 0px 0px;
+            padding: 10px 0px;
             
             width: 74px;
             height: 74px;
@@ -103,9 +103,9 @@ title: Math, Sonification, Plots
         }
         
         .button.pause {
-            color: #000000;
+            color: #FFFFFF;
             text-align: left;
-            padding: 0px 0px;
+            padding: 10px 0px;
             
             width: 74px;
             height: 74px;
@@ -115,23 +115,25 @@ title: Math, Sonification, Plots
         }
 
         .button.PP {
-            border: 0;
+            color: #FFFFFF;
+            text-align: left;
+            padding: 10px 0px;
             background: transparent;
             box-sizing: border-box;
             width: 0;
             height: 74px;
 
-            border-color: #202020 #202020 #202020 #FFFFFF;
+            border-color: transparent transparent transparent #202020;
             transition: 100ms all ease;
             cursor: pointer;
 
             // play state
             border-style: solid;
-            border-width: 37px 0 37px 60px;
+            border-width: 37px 0px 37px 60px;
 
             &.paused {
                 border-style: double;
-                border-width: 0px 0 0px 60px;
+                border-width: 0px 0px 0px 60px;
             }
 
             &:hover {
@@ -143,6 +145,7 @@ title: Math, Sonification, Plots
 
     <button class="button play" value="SONIFICATION"></button>
     <button class="button pause" value="SONIFICATION"></button>
+    <button class="button PP" value="SONIFICATION"></button>
     <input type="button" class="button play" value="SONIFICATION">
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
