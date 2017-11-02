@@ -88,8 +88,28 @@ title: Math, Sonification, Plots
             from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
             to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
+
+        .button.play {
+            width: 74px;
+            height: 74px;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 37px 0px 37px 74px;
+            border-color: transparent transparent transparent #202020;
+        }
+        
+        .button.pause {
+            width: 74px;
+            height: 74px;
+            border-style: double;
+            border-width: 0px 0px 0px 37px;
+            border-color: #202020;
+        }
         </style>
 </head>
+
+    <button class='button pause'></button>
+    <button class='button play'></button>
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
