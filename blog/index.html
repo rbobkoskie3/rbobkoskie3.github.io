@@ -106,7 +106,7 @@ title: Math, Sonification, Plots
         .button.pause {
             color: #FFFFFF;
             text-align: left;
-            padding: 0px 100px;
+            padding: 20px 0px;
             
             width: 74px;
             height: 74px;
@@ -121,7 +121,7 @@ title: Math, Sonification, Plots
             padding: 0px 0px;
             background: transparent;
             box-sizing: border-box;
-            width: 0;
+            width: 74;
             height: 74px;
 
             border-color: transparent transparent transparent #202020;
@@ -148,6 +148,13 @@ title: Math, Sonification, Plots
     <button class="button pause" value="SONIFICATION"></button>
     <button class="button PP" value="SONIFICATION"></button>
     <input type="button" class="button play" value="SONIFICATION">
+    $(document).ready(function() {
+        var btn = $(".PP");
+        btn.click(function() {
+            btn.toggleClass("paused");
+            return false;
+          });
+    });
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
