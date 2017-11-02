@@ -147,14 +147,14 @@ title: Math, Sonification, Plots
 
     <button class="button">SONIFICATION</button>
     <button class="button pause">SONIFICATION</button>
-    <button class="button PP" onclick="myFunction()">TEST</button>
+    <button class="button PP" onclick="myFunction(this)">TEST</button>
 
     <script>
-    function myFunction() {
+    function myFunction(button) {
         //button.removeAttribute("class");
-        document.getElementsByTagName("button")
-        [0].setAttribute("class", "button.zz");
-        [0].innerHTML = "PAUSE";
+        document.getElementsByTagName("button.PP")
+        //button.setAttribute("class", "button.zz");
+        button.innerHTML = "PAUSE";
         // button.setAttribute("transition", "100ms all ease");
         // button.setAttribute("border-color", "#202020 #202020 #202020 #404040");
         [0].setAttribute("border-style", "double");
