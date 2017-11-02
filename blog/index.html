@@ -118,7 +118,7 @@ title: Math, Sonification, Plots
         .button.PP {
             color: #FFFFFF;
             text-align: left;
-            padding: 0px 0px;
+            padding: 0px 5px;
             // background: transparent;
             box-sizing: border-box;
             width: 74;
@@ -128,34 +128,27 @@ title: Math, Sonification, Plots
             transition: 100ms all ease;
             cursor: pointer;
 
-            // play state
             border-style: solid;
             border-width: 37px 0px 37px 60px;
+        }
 
-            &.paused {
-                border-style: double;
-                border-width: 0px 0px 0px 60px;
-            }
-
-            &:hover {
-                border-color: #202020 #202020 #202020 #404040;
-            }
+        .button.zz {
+            border-color: #202020 #202020 #202020 #404040;
+            border-style: double;
+            border-width: 0px 0px 0px 60px;
         }
         </style>
 </head>
 
     <button class="button play">SONIFICATION</button>
     <button class="button pause">SONIFICATION</button>
-    <button class="button PP">SONIFICATION</button>
+    <button class="button PP" onclick="myFunction(this)">SONIFICATION</button>
 
     <script>
-    $(document).ready(function() {
-        var btn = $(".button.PP");
-        btn.click(function() {
-            btn.toggleClass("paused");
-            return false;
-          });
-    });
+    function myFunction(button) {
+        var text = button.innerHTML;
+        button.setAttribute(".button.zz", "active");
+    }
     </script>
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
@@ -215,4 +208,4 @@ title: Math, Sonification, Plots
         <input type="button" class="button" value="SONIFICATION" onclick="play()">
         <button class="button PP" onclick="play()">SONIFICATION</button>
         <button class="button pause" onclick="play()">SONIFICATION</button>
-        <input type="button" class="button" value="SONIFICATION" onclick="play()">
+        <input type="button" class="button PP" value="SONIFICATION" onclick="play()">
