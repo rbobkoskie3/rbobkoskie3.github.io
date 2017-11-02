@@ -105,10 +105,35 @@ title: Math, Sonification, Plots
             border-width: 0px 0px 0px 37px;
             border-color: #202020;
         }
+        // Play Pause button
+        .PP_button {
+            border: 0;
+            background: transparent;
+            box-sizing: border-box;
+            width: 0;
+            height: 74px;
+
+            border-color: transparent transparent transparent #202020;
+            transition: 100ms all ease;
+            cursor: pointer;
+
+            // play state
+            border-style: solid;
+            border-width: 37px 0 37px 60px;
+
+            &.paused {
+                border-style: double;
+                border-width: 0px 0 0px 60px;
+            }
+
+            &:hover {
+                border-color: transparent transparent transparent #404040;
+            }
+        }
         </style>
 </head>
 
-    <button class='button pause'></button>
+    <button class='PP_button'></button>
     <button class='button play'></button>
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
