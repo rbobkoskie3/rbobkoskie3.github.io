@@ -118,7 +118,7 @@ title: Math, Sonification, Plots
         .button.PP {
             color: #FFFFFF;
             text-align: left;
-            padding: 5px 5px;
+            padding: 50px 50px;
             // background: transparent;
             box-sizing: border-box;
             width: 74;
@@ -169,7 +169,7 @@ title: Math, Sonification, Plots
         </div>
         <script>
                 var isPlaying = false
-                function play() {
+                function play(button) {
                         var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
@@ -210,6 +210,6 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
-        <button class="button PP" onclick="play()">SONIFICATION</button>
+        <button class="button PP" onclick="play(this)">SONIFICATION</button>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
 
