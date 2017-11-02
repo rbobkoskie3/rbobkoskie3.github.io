@@ -147,6 +147,8 @@ title: Math, Sonification, Plots
     <button class="button play">SONIFICATION</button>
     <button class="button pause">SONIFICATION</button>
     <button class="button PP">SONIFICATION</button>
+
+    <script>
     $(document).ready(function() {
         var btn = $(".button.PP");
         btn.click(function() {
@@ -154,6 +156,7 @@ title: Math, Sonification, Plots
             return false;
           });
     });
+    </script>
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
@@ -210,4 +213,6 @@ title: Math, Sonification, Plots
                 }
         </script>
         <input type="button" class="button" value="SONIFICATION" onclick="play()">
-
+        <button class="button PP" onclick="play()">SONIFICATION</button>
+        <button class="button pause" onclick="play()">SONIFICATION</button>
+        <input type="button" class="button" value="SONIFICATION" onclick="play()">
