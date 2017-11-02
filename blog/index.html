@@ -137,7 +137,7 @@ title: Math, Sonification, Plots
             border-width: 37px 0px 37px 60px;
         }
 
-        .button.zz {
+        .pause {
             border-color: #202020 #202020 #202020 #404040;
             border-style: double;
             border-width: 0px 0px 0px 60px;
@@ -153,6 +153,7 @@ title: Math, Sonification, Plots
     function myFunction(button) {
         button.removeAttribute("class");
         button.setAttribute("class", "button");
+        button.setAttribute("class", "pause");
         button.innerHTML = "PAUSE";
     }
     </script>
