@@ -130,7 +130,7 @@ title: Math, Sonification, Plots
             height: 74px;
 
             border-color: transparent transparent transparent #202020;
-            // transition: 100ms all ease;
+            transition: 100ms all ease;
             cursor: pointer;
 
             border-style: solid;
@@ -147,20 +147,13 @@ title: Math, Sonification, Plots
 
     <button class="button">SONIFICATION</button>
     <button class="button pause">SONIFICATION</button>
-    <button class="button PP" onclick="myFunction(this)">SONIFICATION</button>
+    <button class="button PP" onclick="myFunction(this)">SONIFY</button>
 
     <script>
     function myFunction(button) {
-        button.removeAttribute("border-color");
-        button.removeAttribute("border-style");
-        button.removeAttribute("border-width");
-        // button.removeAttribute();
+        button.removeAttribute("class");
+        button.setAttribute("class", "button");
         button.innerHTML = "PAUSE";
-        button.setAttribute("transition", "100ms all ease");
-        button.setAttribute("border-color", "#202020");
-        button.setAttribute("border-style", "double");
-        //button.setAttribute("border-width", "0px 0px 0px 60px");
-        // button.setAttribute();
     }
     </script>
 
