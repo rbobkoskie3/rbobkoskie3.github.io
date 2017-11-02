@@ -169,7 +169,7 @@ title: Math, Sonification, Plots
         </div>
         <script>
                 var isPlaying = false
-                function play(button) {
+                function play() {
                         var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
@@ -210,7 +210,7 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
-        <button class="button PP" onclick="play(this)">SONIFICATION</button>
-        <button class="button pause" onclick="play(this)">SONIFICATION</button>
-        <input type="button" class="button" value="SONIFICATION" onclick="play(this)">
+        <button class="button PP" onclick="play()">SONIFICATION</button>
+        <button class="button pause" onclick="play()">SONIFICATION</button>
+        <input type="button" class="button" value="SONIFICATION" onclick="play()">
 
