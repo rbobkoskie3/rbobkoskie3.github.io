@@ -147,12 +147,6 @@ title: Math, Sonification, Plots
     <button class="button play">SONIFICATION</button>
     <button class="button pause">SONIFICATION</button>
     <button class="button PP">SONIFICATION</button>
-    
-    var btn = $(".button.PP");
-    btn.click(function() {
-        btn.toggleClass("paused");
-        return false;
-    }
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
@@ -179,6 +173,13 @@ title: Math, Sonification, Plots
                         var pos = 0;
                         var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
+
+                        var btn = $(".button.PP");
+                        btn.click(function() {
+                            btn.toggleClass("paused");
+                            return false;
+                        }
+                        
                         var audio = document.getElementById("audio");
                         audio.volume = 0.4;
                         if (!isPlaying) {
@@ -208,5 +209,6 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
-        <input type="button" class="button" value="SONIFICATION" onclick="play()">
+        <button class="button PP" onclick="play()">SONIFICATION</button>
+        <--! input type="button" class="button" value="SONIFICATION" onclick="play()" -->
 
