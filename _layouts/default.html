@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-                        <img class="center fit" src="\images\gtech.png">
+                        <img id ="gtech" class="center fit" src="\images\gtech.png">
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -67,13 +67,16 @@
                         </div>
 
                         <script>
+                        var image =  document.getElementById("gtech");
                         function setBG_Black() {
                             document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
                             document.body.style.color = "yellow";
+                            image.src = "\images\gtech.png";
                         }
                         function setBG_White() {
                             document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
                             document.body.style.color = "black";
+                            image.src = "\images\gtech.png";
                         }
                         </script>
 
