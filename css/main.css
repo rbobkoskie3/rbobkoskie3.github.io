@@ -19,6 +19,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+a[target] {
+    background-color: yellow;
+}
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
