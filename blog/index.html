@@ -175,6 +175,14 @@ title: Math, Sonification, Plots
                         // var id = setTimeout(frame, 1000);
                         var audio = document.getElementById("audio");
                         audio.volume = 0.4;
+
+                        audio.onended = function() {
+                                // button.innerHTML = "PLAY";
+                                button.removeAttribute("class");
+                                button.setAttribute("class", "button");
+                                button.setAttribute("class", "play");
+                                isPlaying = false
+                        };
                         if (!isPlaying) {
                                 audio.play();
                                 // button.innerHTML = "PAUSE";
