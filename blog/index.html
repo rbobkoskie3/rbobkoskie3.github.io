@@ -95,51 +95,6 @@ title: Math, Sonification, Plots
             to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
 
-        /*
-        .button.play {
-            color: #FFFFFF;
-            text-align: left;
-            padding: 0px 10px;
-            
-            width: 74px;
-            height: 74px;
-            box-sizing: border-box;
-            border-style: solid;
-            border-width: 37px 0px 37px 60px;
-            border-color: transparent transparent transparent #202020;
-        }
-        */
-        
-        .button.pause {
-            color: #FFFFFF;
-            text-align: left;
-            padding: 20px 0px;
-            
-            width: 74px;
-            height: 74px;
-            border-style: double;
-            border-width: 0px 0px 0px 37px;
-            border-color: #202020;
-        }
-
-        .button.PP {
-            color: #FFFFFF;
-            text-align: left;
-            padding: 0px 5px;
-            // background: transparent;
-            box-sizing: border-box;
-            // width: 74px;
-            width: 74;
-            height: 74px;
-
-            //transition: 100ms all ease;
-            //cursor: pointer;
-
-            border-color: transparent transparent transparent #202020;
-            border-style: solid;
-            border-width: 37px 0px 37px 60px;
-        }
-
         .play {
             background-color: #4CAF50; /* Green background */
             color: white; /* White text */
@@ -149,7 +104,7 @@ title: Math, Sonification, Plots
             // background: transparent;
             box-sizing: border-box;
             // width: 74px;
-            width: 174;
+            width: 74;
             height: 74px;
 
             transition: 100ms all ease;
@@ -169,7 +124,7 @@ title: Math, Sonification, Plots
             // background: transparent;
             box-sizing: border-box;
             // width: 74px;
-            width: 174;
+            width: 74;
             height: 74px;
 
             transition: 100ms all ease;
@@ -182,8 +137,6 @@ title: Math, Sonification, Plots
         </style>
 </head>
 
-    <!-- button class="button">SONIFICATION</button -->
-    <!-- button class="button play">TEST</button -->
     <button class="play" onclick="myFunction(this)">SONIFY</button>
 
     <script>
@@ -215,7 +168,7 @@ title: Math, Sonification, Plots
         </div>
         <script>
                 var isPlaying = false
-                function play() {
+                function play(button) {
                         var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
@@ -224,15 +177,27 @@ title: Math, Sonification, Plots
                         audio.volume = 0.4;
                         if (!isPlaying) {
                                 audio.play();
+                                // button.innerHTML = "PAUSE";
+                                button.removeAttribute("class");
+                                button.setAttribute("class", "button");
+                                button.setAttribute("class", "pause");
                                 isPlaying = true
                         }
                         else {
                                 if (!audio.ended) {
                                     audio.pause();
+                                    // button.innerHTML = "PLAY";
+                                    button.removeAttribute("class");
+                                    button.setAttribute("class", "button");
+                                    button.setAttribute("class", "play");
                                     isPlaying = false
                                 }
                                 else {
                                     audio.play();
+                                    // button.innerHTML = "PAUSE";
+                                    button.removeAttribute("class");
+                                    button.setAttribute("class", "button");
+                                    button.setAttribute("class", "pause");
                                     isPlaying = true
                                 }
                         }
@@ -249,7 +214,10 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
-        <input type="button" class="button" value="SONIFICATION" onclick="play()">
-        <button class="button PP" onclick="play()">SONIFICATION</button>
-        <button class="button pause" onclick="play()">SONIFICATION</button>
-        <input type="button" class="button PP" value="SONIFICATION" onclick="play()">
+        <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
+        <button class="play" onclick="play(this)">SONIFICATION</button>
+
+        // button.innerHTML = "PAUSE";
+        button.removeAttribute("class");
+        button.setAttribute("class", "button");
+        button.setAttribute("class", "pause");
