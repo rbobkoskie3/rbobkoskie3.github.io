@@ -200,10 +200,6 @@ title: Math, Sonification, Plots
                                     button.setAttribute("class", "pause");
                                     isPlaying = true
                                 }
-                        // button.innerHTML = "PLAY";
-                        button.removeAttribute("class");
-                        button.setAttribute("class", "button");
-                        button.setAttribute("class", "play");
                         }
 
                         function frame() {
@@ -216,6 +212,10 @@ title: Math, Sonification, Plots
                                 elem.style.left = pos + 'px'; 
                             }
                       }
+                    // button.innerHTML = "PLAY";
+                        button.removeAttribute("class");
+                        button.setAttribute("class", "button");
+                        button.setAttribute("class", "play");
                 }
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
