@@ -140,16 +140,16 @@ title: Math, Sonification, Plots
             height: 0;
             text-align: left;
             border-top: 12px solid transparent;
-            border-right: 16px solid #000;
+            border-right: 40px solid #000;
             border-bottom: 12px solid transparent;
         }
 
         .ume {
             width: 0;
             height: 0;
-            text-align: right;
+            text-align: left;
             border-top: 12px solid transparent;
-            border-left: 16px solid #000;
+            border-left: 40px solid #000;
             border-bottom: 12px solid transparent;
         }
         </style>
@@ -179,7 +179,7 @@ title: Math, Sonification, Plots
                 var isPlaying = false;
 
                 function vol_inc() {
-                        audio.volume = cur_vol + 0.1;
+                        audio.volume += 0.1;
                 }
 
                 function play(button) {
@@ -238,5 +238,5 @@ title: Math, Sonification, Plots
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <button class="play" onclick="play(this)">SONIFICATION</button>
-        <button class="vol" onclick="vol_dec()">VOLUME</button>
-        <button class="ume" onclick="vol_inc()"></button>
+        <button class="vol" onclick="vol_dec()">VOL</button>
+        <button class="ume" onclick="vol_inc()">UME</button>
