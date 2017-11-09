@@ -107,7 +107,7 @@ title: Math, Sonification, Plots
             width: 74;
             height: 74px;
 
-            transition: 100ms all ease;
+            // transition: 100ms all ease;
             cursor: pointer;
 
             border-color: transparent transparent transparent #202020;
@@ -127,12 +127,12 @@ title: Math, Sonification, Plots
             width: 74;
             height: 74px;
 
-            transition: 100ms all ease;
+            // transition: 100ms all ease;
             cursor: pointer;
             
             border-color: #202020;
             border-style: double;
-            border-width: 0px 0px 0px 66px;
+            border-width: 0px 0px 0px 60px;
         }
 
         .vol {
@@ -180,6 +180,10 @@ title: Math, Sonification, Plots
 
                 function vol_inc() {
                         audio.volume += 0.1;
+                }
+
+                function vol_dec() {
+                        audio.volume -= 0.1;
                 }
 
                 function play(button) {
@@ -238,5 +242,5 @@ title: Math, Sonification, Plots
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <button class="play" onclick="play(this)">SONIFICATION</button>
-        <button class="vol" onclick="vol_dec()">VOL</button>
-        <button class="ume" onclick="vol_inc()">UME</button>
+        <button class="vol" onclick="vol_dec()">-/+</button>
+        <button class="ume" onclick="vol_inc()">VOLUME</button>
