@@ -139,18 +139,18 @@ title: Math, Sonification, Plots
             width: 0;
             height: 0;
             text-align: left;
-            border-top: 8px solid transparent;
-            border-right: 12px solid #000;
-            border-bottom: 8px solid transparent;
+            border-top: 12px solid transparent;
+            border-right: 16px solid #000;
+            border-bottom: 12px solid transparent;
         }
 
         .ume {
             width: 0;
             height: 0;
             text-align: right;
-            border-top: 8px solid transparent;
-            border-left: 12px solid #000;
-            border-bottom: 8px solid transparent;
+            border-top: 12px solid transparent;
+            border-left: 16px solid #000;
+            border-bottom: 12px solid transparent;
         }
         </style>
 </head>
@@ -174,13 +174,20 @@ title: Math, Sonification, Plots
         <div id ="myAnimation"></div>
         </div>
         <script>
-                var isPlaying = false
+                var audio = document.getElementById("audio");
+                cur_vol = audio.volume;
+                var isPlaying = false;
+
+                function vol_inc() {
+                        audio.volume = cur_vol + 0.1;
+                }
+
                 function play(button) {
                         var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
-                        var audio = document.getElementById("audio");
+                        // var audio = document.getElementById("audio");
                         audio.volume = 0.4;
 
                         audio.onended = function() {
@@ -231,5 +238,5 @@ title: Math, Sonification, Plots
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <button class="play" onclick="play(this)">SONIFICATION</button>
-        <button class="vol" onclick="play(this)">VOL</button>
-        <button class="ume" onclick="play(this)">UME</button>
+        <button class="vol" onclick="vol_dec()">VOLUME</button>
+        <button class="ume" onclick="vol_inc()"></button>
