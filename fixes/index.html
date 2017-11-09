@@ -132,25 +132,25 @@ title: Math, Sonification, Plots
             
             border-color: #202020;
             border-style: double;
-            border-width: 0px 0px 0px 60px;
+            border-width: 0px 0px 0px 66px;
         }
 
         .vol {
             width: 0;
             height: 0;
             text-align: left;
-            border-top: 12px solid transparent;
+            border-top: 20px solid transparent;
             border-right: 40px solid #000;
-            border-bottom: 12px solid transparent;
+            border-bottom: 20px solid transparent;
         }
 
         .ume {
             width: 0;
             height: 0;
             text-align: left;
-            border-top: 12px solid transparent;
+            border-top: 20px solid transparent;
             border-left: 40px solid #000;
-            border-bottom: 12px solid transparent;
+            border-bottom: 20px solid transparent;
         }
         </style>
 </head>
@@ -175,6 +175,7 @@ title: Math, Sonification, Plots
         </div>
         <script>
                 var audio = document.getElementById("audio");
+                audio.volume = 0.4;
                 var isPlaying = false;
 
                 function vol_inc() {
@@ -187,7 +188,7 @@ title: Math, Sonification, Plots
                         var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
-                        audio.volume = 0.4;
+                        // audio.volume = 0.4;
 
                         audio.onended = function() {
                                 // button.innerHTML = "PLAY";
