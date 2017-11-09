@@ -138,19 +138,19 @@ title: Math, Sonification, Plots
         .vol {
             width: 0;
             height: 0;
-            text-align: left;
-            border-top: 12px solid transparent;
+            text-align: right;
+            border-top: 20px solid transparent;
             border-right: 40px solid #000;
-            border-bottom: 12px solid transparent;
+            border-bottom: 20px solid transparent;
         }
 
         .ume {
             width: 0;
             height: 0;
-            text-align: left;
-            border-top: 12px solid transparent;
+            text-align: right;
+            border-top: 20px solid transparent;
             border-left: 40px solid #000;
-            border-bottom: 12px solid transparent;
+            border-bottom: 20px solid transparent;
         }
         </style>
 </head>
@@ -174,18 +174,25 @@ title: Math, Sonification, Plots
         <div id ="myAnimation"></div>
         </div>
         <script>
+                var elem = document.getElementById("myAnimation");   
+                var pos = 0;
+                var id = setInterval(frame, 10);
+
                 var audio = document.getElementById("audio");
-                cur_vol = audio.volume;
                 var isPlaying = false;
 
                 function vol_inc() {
                         audio.volume += 0.1;
                 }
 
+                function vol_dec() {
+                        audio.volume -= 0.1;
+                }
+
                 function play(button) {
-                        var elem = document.getElementById("myAnimation");   
-                        var pos = 0;
-                        var id = setInterval(frame, 10);
+                        // var elem = document.getElementById("myAnimation");   
+                        // var pos = 0;
+                        // var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
                         audio.volume = 0.4;
@@ -238,5 +245,5 @@ title: Math, Sonification, Plots
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <button class="play" onclick="play(this)">SONIFICATION</button>
-        <button class="vol" onclick="vol_dec()">VOL</button>
-        <button class="ume" onclick="vol_inc()">UME</button>
+        <button class="vol" onclick="vol_dec()">VOLUME</button>
+        <button class="ume" onclick="vol_inc()">VOLUME</button>
