@@ -233,9 +233,10 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
-                        <div id ="tracePlot"></div>
-                        // var elem = document.getElementById("myAnimation");   
-                        var pos = -100;
+                        // <div id ="tracePlot"></div>
+                        // var elem = document.getElementById("myAnimation");
+                        var elem = document.getElementById("tracePlot");
+                        var pos = 0;
                         var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
