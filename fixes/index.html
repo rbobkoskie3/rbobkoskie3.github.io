@@ -39,7 +39,7 @@ title: Math, Sonification, Plots
                 margin: auto;
         }
 
-        #myContainer {
+        .myContainer {
                 width: 100%;
                 height: 100%;
                 // width: 800px;
@@ -146,13 +146,13 @@ title: Math, Sonification, Plots
         }
         </style>
 </head>
-
+    /* ================ */
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
-    <div id="myContainer" class="center fit">
-        <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change();"/>
+    <div class="center fit myContainer">
+        <img id="img_1" class="center fit myContainer" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" onclick = "change();"/>
         <script>
                 function change() {
                         var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png",
