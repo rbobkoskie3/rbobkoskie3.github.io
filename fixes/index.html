@@ -73,7 +73,35 @@ title: Math, Sonification, Plots
                                                                 * IE 10+, Safari 5 */
         }
 
-        
+        #tracePlot {
+                width: 20px;
+                height: 20px;
+                // top: 8px;
+                top: 0;
+                left: 50%;
+                position: absolute;
+                background-color: #555;
+                border-radius: 50%;
+
+                -webkit-animation-name: example;        /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 5s;         /* Safari 4.0 - 8.0 */
+                -webkit-animation-iteration-count: 1;   /* Safari 4.0 - 8.0 */
+                -webkit-animation-direction: reverse;   /* Safari 4.0 - 8.0 */
+                animation-name: example;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+                animation-direction: reverse;
+        }
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            0%   {left:0px; top:0px;}
+            100% {left:200px; top:200px;}
+        }
+        /* Standard syntax */
+        @keyframes example {
+            0%   {left:0px; top:0px;}
+            100% {left:200px; top:200px;}
+        }
 
         .play {
             background-color: #4CAF50; /* Green background */
