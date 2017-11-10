@@ -217,6 +217,7 @@ title: Math, Sonification, Plots
         </script>
 
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
+        <div id ="tracePlot"></div>
         </div>
 
         <script>
@@ -233,9 +234,7 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
-                        // <div id ="tracePlot"></div>
-                        // var elem = document.getElementById("myAnimation");
-                        var elem = document.getElementById("tracePlot");
+                        var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
