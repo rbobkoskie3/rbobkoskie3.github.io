@@ -73,7 +73,7 @@ title: Math, Sonification, Plots
                                                                 * IE 10+, Safari 5 */
         }
 
-        #tracePlot {
+        .tracePlot {
                 width: 20px;
                 height: 20px;
                 // top: 8px;
@@ -200,7 +200,7 @@ title: Math, Sonification, Plots
         */
         </style>
 </head>
-    /* ========== */
+    /* ==================== */
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
@@ -286,8 +286,8 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
-        <div id="tracePlot"></div>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
+        <div class="tracePlot myContainer"></div>
         <button class="play" onclick="play(this)">SONIFICATION</button>
         <br>
         <button class="vol" onclick="vol_dec()">-</button>
