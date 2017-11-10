@@ -150,8 +150,8 @@ title: Math, Sonification, Plots
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
-    <div id="myContainer">
-        <img class="center" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
+    
+        <img id="myContainer" class="center fit" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
              title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change();"/>
         <script>
                 function change() {
@@ -164,7 +164,7 @@ title: Math, Sonification, Plots
 
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
         <div id ="myAnimation"></div>
-        </div>
+        
         <script>
                 var audio = document.getElementById("audio");
                 audio.volume = 0.4;
