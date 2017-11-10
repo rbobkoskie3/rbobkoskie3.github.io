@@ -236,12 +236,12 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
-                        var boxOne = document.getElementsByClassName('tracePlot')[0],
+                        var boxOne  = document.getElementsByClassName('tracePlot')[0],
                             $boxTwo = $('.tracePlot:eq(1)');
 
-                        var elem = document.getElementById("myAnimation");   
-                        var pos = 0;
-                        var id = setInterval(frame, 10);
+                        // var elem = document.getElementById("myAnimation");   
+                        // var pos = 0;
+                        // var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
@@ -255,7 +255,7 @@ title: Math, Sonification, Plots
                         };
                         if (!isPlaying) {
                                 audio.play();
-                                boxOne.classList.add('translate');
+                                // boxOne.classList.add('translate');
                                 // button.innerHTML = "PAUSE";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
