@@ -221,6 +221,9 @@ title: Math, Sonification, Plots
         </div>
 
         <script>
+                var boxOne = document.getElementsByClassName('tracePlot')[0],
+                    $boxTwo = $('.tracePlot:eq(1)');
+                
                 var audio = document.getElementById("audio");
                 audio.volume = 0.4;
                 var isPlaying = false;
@@ -234,9 +237,6 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
-                        var boxOne = document.getElementsByClassName('tracePlot')[0],
-                            $boxTwo = $('.tracePlot:eq(1)');
-
                         var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
@@ -253,7 +253,6 @@ title: Math, Sonification, Plots
                         };
                         if (!isPlaying) {
                                 audio.play();
-                                boxOne.classList.add('horizTranslate');
                                 // button.innerHTML = "PAUSE";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
