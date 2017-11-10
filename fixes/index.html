@@ -47,6 +47,7 @@ title: Math, Sonification, Plots
                 position: relative;
                 // background: url('https://rbobkoskie3.github.io/images/ST_Circle.png');
                 background-color: blue;
+                // background-color: black;
         }
 
         #myAnimation {
@@ -150,7 +151,7 @@ title: Math, Sonification, Plots
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
     <div id="myContainer">
-        <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
+        <img class="center" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
              title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="img_1" onclick = "change();"/>
         <script>
                 function change() {
@@ -220,7 +221,7 @@ title: Math, Sonification, Plots
                         }
 
                         function frame() {
-                            if (pos == 5000) {
+                            if (pos == 600) {
                                 clearInterval(id);
                             }
                             else {
