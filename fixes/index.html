@@ -82,16 +82,17 @@ title: Math, Sonification, Plots
                 position: absolute;
                 background-color: #555;
                 border-radius: 50%;
-
+        }
+        .tracePlot.translate {
                 -webkit-animation-name: example;        /* Safari 4.0 - 8.0 */
                 -webkit-animation-duration: 5s;         /* Safari 4.0 - 8.0 */
                 -webkit-animation-iteration-count: 1;   /* Safari 4.0 - 8.0 */
-                -webkit-animation-direction: reverse;   /* Safari 4.0 - 8.0 */
+                -webkit-animation-direction: normal;   /* Safari 4.0 - 8.0 */
                 animation-name: example;
                 animation-duration: 5s;
                 animation-iteration-count: 1;
                 animation-direction: normal;
-        }
+        
         /* Safari 4.0 - 8.0 */
         @-webkit-keyframes example {
             0%   {left:0px; top:0px;}
@@ -101,6 +102,7 @@ title: Math, Sonification, Plots
         @keyframes example {
             0%   {left:0px; top:0px;}
             100% {left:600px; top:600px;}
+        }
         }
 
         .play {
@@ -234,6 +236,9 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
+                        var boxOne = document.getElementsByClassName('tracePlot')[0],
+                            $boxTwo = $('.tracePlot:eq(1)');
+
                         var elem = document.getElementById("myAnimation");   
                         var pos = 0;
                         var id = setInterval(frame, 10);
@@ -250,6 +255,7 @@ title: Math, Sonification, Plots
                         };
                         if (!isPlaying) {
                                 audio.play();
+                                boxOne.classList.add('translate');
                                 // button.innerHTML = "PAUSE";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
