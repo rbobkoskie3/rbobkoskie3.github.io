@@ -144,9 +144,35 @@ title: Math, Sonification, Plots
             border-left: 36px solid #000;
             border-bottom: 24px solid transparent;
         }
+        /*
+        /* *********************************
+         * Set up the keyframes to actually describe the begining and end states of 
+         * the animation.  The browser will interpolate all the frames between these 
+         * points.  Again, remember your vendor-specific prefixes for now!
+         */
+        @-webkit-keyframes myOrbit {
+            from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @-moz-keyframes myOrbit {
+            from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @-o-keyframes myOrbit {
+            from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @keyframes myOrbit {
+            from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+        */
         </style>
 </head>
-    /* ======= */
+    /* ================== */
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
@@ -164,7 +190,7 @@ title: Math, Sonification, Plots
 
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
         <div id ="myAnimation"></div>
-        
+        </div>
         <script>
                 var audio = document.getElementById("audio");
                 audio.volume = 0.4;
@@ -232,7 +258,6 @@ title: Math, Sonification, Plots
                       }
                 }
         </script>
-        </div>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <button class="play" onclick="play(this)">SONIFICATION</button>
         <br>
