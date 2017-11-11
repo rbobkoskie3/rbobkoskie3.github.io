@@ -200,7 +200,7 @@ title: Math, Sonification, Plots
         */
         </style>
 </head>
-    /* ==================== */
+    /* ====== */
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
@@ -277,13 +277,13 @@ title: Math, Sonification, Plots
                         }
 
                         function frame() {
-                            if (pos == 600) {
+                            if (pos == 400) {
                                 clearInterval(id);
                             }
                             else {
                                 pos++; 
                                 elem.style.top = pos + 'px'; 
-                                elem.style.left = pos + 'px'; 
+                                elem.style.left = pos + 'px + 5'; 
                             }
                       }
                 }
