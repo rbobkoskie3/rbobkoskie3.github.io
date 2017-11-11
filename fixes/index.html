@@ -313,10 +313,11 @@ title: Math, Sonification, Plots
 
 
         <div class='box'></div>
-        <button class='toggleButton' onclick="PLAY()" value='Play'>Play</button>
+        <button class='toggleButton' onclick="PLAY(this)" value='Play'>Play</button>
 
         <script>
-        PLAY() {
+        PLAY(button) {
+            this.innerHTML = '===FUCK---';
         var boxOne = document.getElementsByClassName('box')[0],
                      $boxTwo = $('.box:eq(1)');
 
