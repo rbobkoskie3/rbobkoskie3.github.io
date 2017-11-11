@@ -282,10 +282,10 @@ title: Math, Sonification, Plots
                             }
                             else {
                                 pos++;
-                                // HORIZONTAL elem.style.top = pos + 'px' +5;
-                                elem.style.top = pos + 'px';
-                                // elem.style.left = pos + 'px';
-                                elem.style.right = pos + 'px';
+                                // HORIZONTAL elem.style.top = pos + 'px' +5; // Zero Slope
+                                // elem.style.top = pos + 'px';
+                                elem.style.left = pos + 'px'; // Neg Slope
+                                elem.style.bottom = pos + 'px';
                             }
                       }
                 }
