@@ -200,10 +200,21 @@ title: Math, Sonification, Plots
         */
 
         .box {
-            margin: 30px;
-            height: 50px;
-            width: 50px;
-            background-color: blue;
+                width: 20px;
+                height: 20px;
+                // top: 8px;
+                top: 0;
+                left: 50%;
+                position: absolute;
+                background-color: #555;
+                border-radius: 50%;
+
+                -webkit-transition: 3s;
+                -moz-transition: 3s;
+                -ms-transition: 3s;
+                -o-transition: 3s;
+                transition: 3s;
+                margin-left: 50%;
         }
         .box.horizTranslate {
             -webkit-transition: 3s;
@@ -322,7 +333,7 @@ title: Math, Sonification, Plots
             if(button.innerHTML === 'Play') { 
                 button.innerHTML = 'Pause';
                 // boxOne.classList.add('horizTranslate');
-                boxOne.setAttribute("class", "horizTranslate");
+                // boxOne.setAttribute("class", "horizTranslate");
             }
             else {
                 button.innerHTML = 'Play';
