@@ -317,6 +317,9 @@ title: Math, Sonification, Plots
 
         <script>
         function PLAY(button) {
+            if(button.innerHTML === 'Play') { 
+                button.innerHTML = '--- FUCK ---';
+            }
             var boxOne = document.getElementsByClassName('box')[0],
                          $boxTwo = $('.box:eq(1)');
        
