@@ -198,6 +198,11 @@ title: Math, Sonification, Plots
             to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
         */
+
+        .box img:hover, .box img.clicked {
+            margin-left:500px;
+            -webkit-transition:1s; // you don't need to specify this again
+         }
         </style>
 </head>
     /* ====== */
@@ -237,7 +242,10 @@ title: Math, Sonification, Plots
                 function play(button) {
                         var elem = document.getElementById("myAnimation");   
                         var pos = 75;
-                        var id = setInterval(frame, 10);
+                        // var id = setInterval(frame, 10);
+                        $('.box img').on('click', function() {
+                            $(this).toggleClass('clicked');
+                        });
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
