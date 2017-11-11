@@ -317,22 +317,21 @@ title: Math, Sonification, Plots
 
         <script>
         function PLAY(button) {
-            if(button.innerHTML === 'Play') { 
-                button.innerHTML = '--- FUCK ---';
-            }
             var boxOne = document.getElementsByClassName('box')[0],
                          $boxTwo = $('.box:eq(1)');
        
             if(button.innerHTML === 'Play') { 
                 button.innerHTML = 'Pause';
-                boxOne.classList.add('horizTranslate');
+                // boxOne.classList.add('horizTranslate');
+                boxOne.setAttribute("class", "horizTranslate");
             }
             else {
                 button.innerHTML = 'Play';
                 var computedStyle = window.getComputedStyle(boxOne),
                     marginLeft = computedStyle.getPropertyValue('margin-left');
                 boxOne.style.marginLeft = marginLeft;
-                boxOne.classList.remove('horizTranslate');    
+                // boxOne.classList.remove('horizTranslate');
+                boxOne.removeAttribute("class", "horizTranslate");
             }
         }
         </script>
