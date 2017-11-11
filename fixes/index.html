@@ -198,6 +198,21 @@ title: Math, Sonification, Plots
             to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
         */
+
+        .box {
+            margin: 30px;
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+        }
+        .box.horizTranslate {
+            -webkit-transition: 3s;
+            -moz-transition: 3s;
+            -ms-transition: 3s;
+            -o-transition: 3s;
+            transition: 3s;
+            margin-left: 50% !important;
+        }
         </style>
 </head>
     /* =================== */
@@ -294,3 +309,6 @@ title: Math, Sonification, Plots
         <br>
         <button class="vol" onclick="vol_dec()">-</button>
         <button class="ume" onclick="vol_inc()">+ VOLUME</button>
+
+        <div class='box'></div>
+        <button class='toggleButton' value='play'>Play</button>
