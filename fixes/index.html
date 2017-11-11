@@ -227,6 +227,10 @@ title: Math, Sonification, Plots
         </div>
 
         <script>
+                $('.box img').on('click', function() {
+                            $(this).toggleClass('clicked');
+                        });
+                
                 var audio = document.getElementById("audio");
                 audio.volume = 0.4;
                 var isPlaying = false;
@@ -243,9 +247,6 @@ title: Math, Sonification, Plots
                         var elem = document.getElementById("myAnimation");   
                         var pos = 75;
                         // var id = setInterval(frame, 10);
-                        $('.box img').on('click', function() {
-                            $(this).toggleClass('clicked');
-                        });
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
