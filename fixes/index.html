@@ -236,7 +236,7 @@ title: Math, Sonification, Plots
 
                 function play(button) {
                         var elem = document.getElementById("myAnimation");   
-                        var pos = 100;
+                        var pos = 75;
                         var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
@@ -282,10 +282,10 @@ title: Math, Sonification, Plots
                             }
                             else {
                                 pos++;
-                                // elem.style.top = pos + 'px' +5;
+                                // HORIZONTAL elem.style.top = pos + 'px' +5;
                                 elem.style.top = pos + 'px';
                                 elem.style.left = pos + 'px';
-                                elem.style.right = pos;
+                                elem.style.right = pos + 'px';
                             }
                       }
                 }
