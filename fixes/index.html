@@ -313,9 +313,10 @@ title: Math, Sonification, Plots
 
 
         <div class='box'></div>
-        <button class='toggleButton' value='play'>Play</button>
+        <button class='toggleButton' onclick="PLAY()" value='play'>Play</button>
 
         <script>
+        PLAY() {
         var boxOne = document.getElementsByClassName('box')[0],
                      $boxTwo = $('.box:eq(1)');
 
@@ -327,10 +328,11 @@ title: Math, Sonification, Plots
             else {
                 this.innerHTML = 'Play';
                 var computedStyle = window.getComputedStyle(boxOne),
-                marginLeft = computedStyle.getPropertyValue('margin-left');
+                    marginLeft = computedStyle.getPropertyValue('margin-left');
                 boxOne.style.marginLeft = marginLeft;
                 boxOne.classList.remove('horizTranslate');    
             }
+        }
         }
 
         
