@@ -125,7 +125,7 @@ title: Math, Sonification, Plots
                 height: 20px;
                 // top: 8px;
                 top: 0;
-                left: 50%;
+                // left: 50%;
                 position: absolute;
                 background-color: #555;
                 border-radius: 50%;
@@ -240,7 +240,7 @@ title: Math, Sonification, Plots
                         // audio.volume = 0.4;
 
                         audio.onended = function() {
-                                elem.style.webkitAnimationPlayState = 'initial';
+                                elem.style.webkitAnimationPlayState = 'inherit';
                                 elem.style.webkitAnimationPlayState = 'paused';
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
