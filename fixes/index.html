@@ -148,33 +148,6 @@ title: Math, Sonification, Plots
                 animation-play-state:paused;
 
                 -webkit-animation-name: example;      /* Safari 4.0 - 8.0 */
-                -webkit-animation-duration: 10s;      /* Safari 4.0 - 8.0 */
-                -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-                -webkit-animation-direction: normal;  /* Safari 4.0 - 8.0 */
-                animation-name: example;
-                animation-duration: 10s;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-        }
-
-        .pause_tracer {
-                -webkit-animation-play-state:paused;
-                -moz-animation-play-state:paused;
-                -o-animation-play-state:paused; 
-                animation-play-state:paused;
-        }
-
-        .tracePlot {
-                width: 20px;
-                height: 20px;
-                // top: 8px;
-                top: 0;
-                left: 50%;
-                position: absolute;
-                background-color: #555;
-                border-radius: 50%;
-
-                -webkit-animation-name: example;      /* Safari 4.0 - 8.0 */
                 -webkit-animation-duration: 5s;       /* Safari 4.0 - 8.0 */
                 -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
                 -webkit-animation-direction: normal;  /* Safari 4.0 - 8.0 */
@@ -183,6 +156,7 @@ title: Math, Sonification, Plots
                 animation-iteration-count: 1;
                 animation-direction: normal;
         }
+
         /* Safari 4.0 - 8.0 */
         @-webkit-keyframes example {
             0%   {left:0px; top:0px;}
@@ -259,8 +233,8 @@ title: Math, Sonification, Plots
 
                 function play(button) {
                         var elem = document.getElementById("myAnimation");   
-                        var pos = 75;
-                        var id = setInterval(frame, 10);
+                        // var pos = 75;
+                        // var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
@@ -302,19 +276,6 @@ title: Math, Sonification, Plots
                                     isPlaying = true
                                 }
                         }
-
-                        function frame() {
-                            // elem.style.webkitAnimationPlayState = 'running';
-                            if (pos == 450) {
-                                clearInterval(id);
-                            }
-                            else {
-                                pos++;
-                                elem.style.top = (pos-10) + 'px';
-                                // elem.style.left = pos + 'px'; // Neg Slope
-                                elem.style.left = (pos+50) + 'px'; // Neg Slope
-                            }
-                      }
                 }
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
