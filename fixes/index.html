@@ -250,7 +250,6 @@ title: Math, Sonification, Plots
                                 button.setAttribute("class", "button");
                                 button.setAttribute("class", "pause");
                                 isPlaying = true
-                                audio.onended = play(button);
                         }
                         else {
                                 if (!audio.ended) {
@@ -270,6 +269,7 @@ title: Math, Sonification, Plots
                                     button.setAttribute("class", "button");
                                     button.setAttribute("class", "pause");
                                     isPlaying = true
+                                    audio.onended = play(button);
                                 }
                         }
                 }
