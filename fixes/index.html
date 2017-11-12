@@ -123,10 +123,10 @@ title: Math, Sonification, Plots
         #myAnimation {
                 width: 20px;
                 height: 20px;
-                // top: 8px;
-                top: 500px;
-                left: 5000px;
+                // top: 0;
                 // left: 50%;
+                // top: 0px;
+                // left: 0px;
                 position: absolute;
                 background-color: #555;
                 border-radius: 50%;
@@ -241,13 +241,15 @@ title: Math, Sonification, Plots
                         // audio.volume = 0.4;
 
                         audio.onended = function() {
-                                elem.style.webkitAnimationPlayState = 'initial';
+                                // elem.style.webkitAnimationPlayState = 'inherit';
                                 elem.style.webkitAnimationPlayState = 'paused';
+                                elem.style.webkitAnimationPlayState = 'initial';
                                 // document.getElementById("myAnimation").style.top = "0px";
                                 // document.getElementById("myAnimation").style.left = "0px";
-                                elem.style.position = 'absolute';
-                                elem.style.top = '0px';
-                                elem.style.left = '0px';
+                                // elem.style.position = 'absolute';
+                                // elem.style.top = '0px';
+                                // elem.style.left = '0px';
+
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
