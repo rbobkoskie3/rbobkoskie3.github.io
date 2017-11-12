@@ -240,8 +240,10 @@ title: Math, Sonification, Plots
                         // audio.volume = 0.4;
 
                         audio.onended = function() {
-                                elem.style.webkitAnimationPlayState = 'inherit';
+                                // elem.style.webkitAnimationPlayState = 'inherit';
                                 elem.style.webkitAnimationPlayState = 'paused';
+                                elem.style.top = '0';
+                                elem.style.left = '0';
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
