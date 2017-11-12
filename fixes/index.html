@@ -274,7 +274,7 @@ title: Math, Sonification, Plots
                         };
                         if (!isPlaying) {
                                 audio.play();
-                                elem.webkitAnimationPlayState = 'running';
+                                elem.style.webkitAnimationPlayState = 'running';
                                 // button.innerHTML = "PAUSE";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
@@ -301,7 +301,7 @@ title: Math, Sonification, Plots
                         }
 
                         function frame() {
-                            // elem.webkitAnimationPlayState = 'running';
+                            // elem.style.webkitAnimationPlayState = 'running';
                             if (pos == 450) {
                                 clearInterval(id);
                             }
