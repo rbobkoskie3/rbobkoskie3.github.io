@@ -300,6 +300,7 @@ title: Math, Sonification, Plots
                         }
 
                         function frame() {
+                            elem.webkitAnimationPlayState = 'paused';
                             if (pos == 450) {
                                 clearInterval(id);
                             }
