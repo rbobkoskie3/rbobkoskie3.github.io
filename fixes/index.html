@@ -153,10 +153,10 @@ title: Math, Sonification, Plots
                 background-color: #555;
                 border-radius: 50%;
 
-                -webkit-animation-name: example;      /* Safari 4.0 - 8.0 */
-                -webkit-animation-duration: 5s;       /* Safari 4.0 - 8.0 */
-                -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-                -webkit-animation-direction: normal;  /* Safari 4.0 - 8.0 */
+                -webkit-animation-name: example;        /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 5s;         /* Safari 4.0 - 8.0 */
+                -webkit-animation-iteration-count: 1;   /* Safari 4.0 - 8.0 */
+                -webkit-animation-direction: normal;   /* Safari 4.0 - 8.0 */
                 animation-name: example;
                 animation-duration: 5s;
                 animation-iteration-count: 1;
@@ -199,47 +199,9 @@ title: Math, Sonification, Plots
             to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
         */
-
-        .box {
-                width: 20px;
-                height: 20px;
-                // top: 8px;
-                top: 0;
-                // left: 50%;
-                // position: absolute;
-                background-color: #555;
-                border-radius: 50%;
-
-                // margin: 30px;
-                // height: 50px;
-                // width: 50px;
-                // background-color: blue;
-        }
-        .horizTranslate {
-                -webkit-animation-play-state:running;
-                -moz-animation-play-state:running;
-                -o-animation-play-state:running; 
-                animation-play-state:running;
-                
-                -webkit-animation-name: example;      /* Safari 4.0 - 8.0 */
-                -webkit-animation-duration: 5s;       /* Safari 4.0 - 8.0 */
-                -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
-                -webkit-animation-direction: normal;  /* Safari 4.0 - 8.0 */
-                animation-name: example;
-                animation-duration: 5s;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-                
-                // -webkit-transition: 3s;
-                // -moz-transition: 3s;
-                // -ms-transition: 3s;
-                // -o-transition: 3s;
-                // transition: 3s;
-                // margin-left: 50%;
-        }
         </style>
 </head>
-
+    /* ====== */
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
@@ -274,9 +236,9 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
-                        // var elem = document.getElementById("myAnimation");   
-                        // var pos = 75;
-                        // var id = setInterval(frame, 10);
+                        var elem = document.getElementById("myAnimation");   
+                        var pos = 75;
+                        var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
@@ -333,28 +295,3 @@ title: Math, Sonification, Plots
         <br>
         <button class="vol" onclick="vol_dec()">-</button>
         <button class="ume" onclick="vol_inc()">+ VOLUME</button>
-
-
-
-        <div class='box'></div>
-        <button class='button' onclick="PLAY(this)" value='play'>Play</button>
-
-        <script>
-        function PLAY(button) {
-            var boxOne = document.getElementsByClassName('box');
-       
-            if(button.innerHTML === 'Play') { 
-                button.innerHTML = 'Pause';
-                // boxOne.classList.add('horizTranslate');
-                boxOne.setAttribute("class", "tracePlot");
-            }
-            else {
-                button.innerHTML = 'Play';
-                var computedStyle = window.getComputedStyle(boxOne),
-                    marginLeft = computedStyle.getPropertyValue('margin-left');
-                boxOne.style.marginLeft = marginLeft;
-                // boxOne.classList.remove('horizTranslate');
-                boxOne.removeAttribute("class", "horizTranslate");
-            }
-        }
-        </script>
