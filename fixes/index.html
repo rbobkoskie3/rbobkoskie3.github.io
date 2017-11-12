@@ -239,8 +239,7 @@ title: Math, Sonification, Plots
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
 
-                        audio.onended = function(elem) {
-                                // var elem = document.getElementById("myAnimation");
+                        audio.onended = function() {
                                 elem.style.webkitAnimationPlayState = 'running';
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
