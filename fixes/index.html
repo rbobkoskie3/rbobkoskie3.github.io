@@ -241,7 +241,7 @@ title: Math, Sonification, Plots
 
 
 
-
+ 
                         if (!isPlaying) {
                                 audio.play();
                                 elem.style.webkitAnimationPlayState = 'running';
@@ -260,7 +260,6 @@ title: Math, Sonification, Plots
                                     button.setAttribute("class", "button");
                                     button.setAttribute("class", "play");
                                     isPlaying = false
-                                    audio.onended = play(button);
                                 }
                                 else {
                                     audio.play();
@@ -272,6 +271,7 @@ title: Math, Sonification, Plots
                                     isPlaying = true
                                 }
                         }
+                        audio.onended = play(button);
                 }
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
