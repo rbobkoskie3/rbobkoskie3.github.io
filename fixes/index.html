@@ -136,11 +136,20 @@ title: Math, Sonification, Plots
                  * prefixes as well as the official syntax for now. Remember, tools like 
                  * CSS Please are your friends!
                  */
-                -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
-                   -moz-animation: myOrbit 4s linear infinite; /* Firefox 5-15 */
-                     -o-animation: myOrbit 4s linear infinite; /* Opera 12+ */
-                        animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+, 
+                // -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
+                //    -moz-animation: myOrbit 4s linear infinite; /* Firefox 5-15 */
+                //      -o-animation: myOrbit 4s linear infinite; /* Opera 12+ */
+                //         animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+, 
                                                                 * IE 10+, Safari 5 */
+
+                -webkit-animation-name: example;      /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 5s;       /* Safari 4.0 - 8.0 */
+                -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+                -webkit-animation-direction: normal;  /* Safari 4.0 - 8.0 */
+                animation-name: example;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+                animation-direction: normal;
         }
 
         .tracePlot {
