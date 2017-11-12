@@ -239,9 +239,15 @@ title: Math, Sonification, Plots
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
 
-
-
- 
+                        audio.onended = function() {
+                                var elem = document.getElementById("myAnimation");
+                                elem.style.webkitAnimationPlayState = 'initial';
+                                // button.innerHTML = "PLAY";
+                                button.removeAttribute("class");
+                                button.setAttribute("class", "button");
+                                button.setAttribute("class", "play");
+                                isPlaying = false
+                        };
                         if (!isPlaying) {
                                 audio.play();
                                 elem.style.webkitAnimationPlayState = 'running';
@@ -272,7 +278,6 @@ title: Math, Sonification, Plots
                                 }
                         }
                 }
-                audio.onended = play(button);
         </script>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <button class="play" onclick="play(this)">SONIFICATION</button>
