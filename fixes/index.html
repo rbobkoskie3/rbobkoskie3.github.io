@@ -332,7 +332,7 @@ title: Math, Sonification, Plots
 
 
         <div class='box'></div>
-        <button class='horizTranslate' onclick="PLAY(this)" value='play'>Play</button>
+        <button class='button' onclick="PLAY(this)" value='play'>Play</button>
 
         <script>
         function PLAY(button) {
@@ -341,8 +341,7 @@ title: Math, Sonification, Plots
             if(button.innerHTML === 'Play') { 
                 button.innerHTML = 'Pause';
                 // boxOne.classList.add('horizTranslate');
-                boxOne.className ='horizTranslate';
-                // boxOne.setAttribute("class", "horizTranslate");
+                boxOne.setAttribute("class", "horizTranslate");
             }
             else {
                 button.innerHTML = 'Play';
