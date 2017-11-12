@@ -50,59 +50,6 @@ title: Math, Sonification, Plots
                 // background-color: black;
         }
 
-        #myAnimation {
-                width: 20px;
-                height: 20px;
-                // top: 8px;
-                top: 0;
-                left: 50%;
-                position: absolute;
-                background-color: #555;
-                border-radius: 50%;
-
-                /*
-                 * Sets up the animation duration, timing-function (or easing)
-                 * and iteration-count. Ensure you use the appropriate vendor-specific 
-                 * prefixes as well as the official syntax for now. Remember, tools like 
-                 * CSS Please are your friends!
-                 */
-                -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
-                   -moz-animation: myOrbit 4s linear infinite; /* Firefox 5-15 */
-                     -o-animation: myOrbit 4s linear infinite; /* Opera 12+ */
-                        animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+, 
-                                                                * IE 10+, Safari 5 */
-        }
-
-        .tracePlot {
-                width: 20px;
-                height: 20px;
-                // top: 8px;
-                top: 0;
-                left: 50%;
-                position: absolute;
-                background-color: #555;
-                border-radius: 50%;
-
-                -webkit-animation-name: example;        /* Safari 4.0 - 8.0 */
-                -webkit-animation-duration: 5s;         /* Safari 4.0 - 8.0 */
-                -webkit-animation-iteration-count: 1;   /* Safari 4.0 - 8.0 */
-                -webkit-animation-direction: normal;   /* Safari 4.0 - 8.0 */
-                animation-name: example;
-                animation-duration: 5s;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-        }
-        /* Safari 4.0 - 8.0 */
-        @-webkit-keyframes example {
-            0%   {left:0px; top:0px;}
-            100% {left:600px; top:600px;}
-        }
-        /* Standard syntax */
-        @keyframes example {
-            0%   {left:0px; top:0px;}
-            100% {left:600px; top:600px;}
-        }
-
         .play {
             background-color: #4CAF50; /* Green background */
             color: white; /* White text */
@@ -172,6 +119,60 @@ title: Math, Sonification, Plots
             border-left: 36px solid #000;
             border-bottom: 24px solid transparent;
         }
+
+        #myAnimation {
+                width: 20px;
+                height: 20px;
+                // top: 8px;
+                top: 0;
+                left: 50%;
+                position: absolute;
+                background-color: #555;
+                border-radius: 50%;
+
+                /*
+                 * Sets up the animation duration, timing-function (or easing)
+                 * and iteration-count. Ensure you use the appropriate vendor-specific 
+                 * prefixes as well as the official syntax for now. Remember, tools like 
+                 * CSS Please are your friends!
+                 */
+                -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
+                   -moz-animation: myOrbit 4s linear infinite; /* Firefox 5-15 */
+                     -o-animation: myOrbit 4s linear infinite; /* Opera 12+ */
+                        animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+, 
+                                                                * IE 10+, Safari 5 */
+        }
+
+        .tracePlot {
+                width: 20px;
+                height: 20px;
+                // top: 8px;
+                top: 0;
+                left: 50%;
+                position: absolute;
+                background-color: #555;
+                border-radius: 50%;
+
+                -webkit-animation-name: example;        /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 5s;         /* Safari 4.0 - 8.0 */
+                -webkit-animation-iteration-count: 1;   /* Safari 4.0 - 8.0 */
+                -webkit-animation-direction: normal;   /* Safari 4.0 - 8.0 */
+                animation-name: example;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+                animation-direction: normal;
+        }
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            0%   {left:0px; top:0px;}
+            100% {left:600px; top:600px;}
+        }
+        /* Standard syntax */
+        @keyframes example {
+            0%   {left:0px; top:0px;}
+            100% {left:600px; top:600px;}
+        }
+
         /*
         // *********************************
         // Set up the keyframes to actually describe the begining and end states of 
@@ -200,22 +201,31 @@ title: Math, Sonification, Plots
         */
 
         .box {
-            margin: 30px;
-            height: 50px;
-            width: 50px;
-            background-color: blue;
+                width: 20px;
+                height: 20px;
+                // top: 8px;
+                top: 0;
+                left: 50%;
+                position: absolute;
+                background-color: #555;
+                border-radius: 50%;
+
+                // margin: 30px;
+                // height: 50px;
+                // width: 50px;
+                // background-color: blue;
         }
         .box.horizTranslate {
-            -webkit-transition: 3s;
-            -moz-transition: 3s;
-            -ms-transition: 3s;
-            -o-transition: 3s;
-            transition: 3s;
-            margin-left: 50%;
+                -webkit-transition: 3s;
+                -moz-transition: 3s;
+                -ms-transition: 3s;
+                -o-transition: 3s;
+                transition: 3s;
+                margin-left: 50%;
         }
         </style>
 </head>
-    /* =================== */
+
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
 
