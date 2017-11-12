@@ -124,7 +124,8 @@ title: Math, Sonification, Plots
                 width: 20px;
                 height: 20px;
                 // top: 8px;
-                top: 0;
+                top: 0px;
+                left: 0px;
                 // left: 50%;
                 position: absolute;
                 background-color: #555;
@@ -255,10 +256,6 @@ title: Math, Sonification, Plots
                         };
                         if (!isPlaying) {
                                 audio.play();
-                                elem.style.webkitAnimationPlayState = 'initial';
-                                elem.style.position = 'absolute';
-                                elem.style.top = '0px';
-                                elem.style.left = '0px';
                                 elem.style.webkitAnimationPlayState = 'running';
                                 // button.innerHTML = "PAUSE";
                                 button.removeAttribute("class");
