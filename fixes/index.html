@@ -245,8 +245,8 @@ title: Math, Sonification, Plots
                                 // document.getElementById("myAnimation").style.top = "0px";
                                 // document.getElementById("myAnimation").style.left = "0px";
                                 elem.style.position = 'absolute';
-                                //elem.style.top = '0px';
-                                //elem.style.left = '0px';
+                                elem.style.top = '0px';
+                                elem.style.left = '0px';
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
                                 button.setAttribute("class", "button");
@@ -255,6 +255,9 @@ title: Math, Sonification, Plots
                         };
                         if (!isPlaying) {
                                 audio.play();
+                                elem.style.position = 'absolute';
+                                elem.style.top = '0px';
+                                elem.style.left = '0px';
                                 elem.style.webkitAnimationPlayState = 'running';
                                 // button.innerHTML = "PAUSE";
                                 button.removeAttribute("class");
