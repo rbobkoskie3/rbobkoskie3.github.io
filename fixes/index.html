@@ -284,6 +284,7 @@ title: Math, Sonification, Plots
                         else {
                                 if (!audio.ended) {
                                     audio.pause();
+                                    elem.style.webkitAnimationPlayState = 'paused';
                                     // button.innerHTML = "PLAY";
                                     button.removeAttribute("class");
                                     button.setAttribute("class", "button");
@@ -292,6 +293,7 @@ title: Math, Sonification, Plots
                                 }
                                 else {
                                     audio.play();
+                                    elem.style.webkitAnimationPlayState = 'running';
                                     // button.innerHTML = "PAUSE";
                                     button.removeAttribute("class");
                                     button.setAttribute("class", "button");
