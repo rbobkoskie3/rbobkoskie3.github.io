@@ -200,7 +200,7 @@ title: Math, Sonification, Plots
         }
         */
 
-        .box {
+        #box {
                 width: 20px;
                 height: 20px;
                 // top: 8px;
@@ -336,12 +336,13 @@ title: Math, Sonification, Plots
 
         <script>
         function PLAY(button) {
-            var boxOne = document.getElementsByClassName('box');
+            // var boxOne = document.getElementsByClassName('box');
        
             if(button.innerHTML === 'Play') { 
                 button.innerHTML = 'Pause';
                 // boxOne.classList.add('horizTranslate');
-                boxOne.setAttribute("class", "horizTranslate");
+                document.getElementById('box').className ='horizTranslate';
+                // boxOne.setAttribute("class", "horizTranslate");
             }
             else {
                 button.innerHTML = 'Play';
