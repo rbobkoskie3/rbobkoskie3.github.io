@@ -242,9 +242,6 @@ title: Math, Sonification, Plots
 
 
 
-
-
-                        audio.onended = play(button); 
                         if (!isPlaying) {
                                 audio.play();
                                 elem.style.webkitAnimationPlayState = 'running';
@@ -253,6 +250,7 @@ title: Math, Sonification, Plots
                                 button.setAttribute("class", "button");
                                 button.setAttribute("class", "pause");
                                 isPlaying = true
+                                audio.onended = play(button);
                         }
                         else {
                                 if (!audio.ended) {
