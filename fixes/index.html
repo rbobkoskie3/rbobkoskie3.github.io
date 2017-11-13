@@ -235,7 +235,8 @@ title: Math, Sonification, Plots
                 function play(button) {
                         var elem = document.getElementById("myAnimation");
                         var audio_len = audio.duration;
-                        elem.style.animation-duration = audio.duration;
+                        elem.style["-webkit-animation-duration"] = audio.duration;
+                        elem.style["animation-duration"] = audio.duration;
                         // var pos = 75;
                         // var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
