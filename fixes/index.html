@@ -4,7 +4,17 @@ title: Math, Sonification, Plots
 ---
 
 <head>
-        <style>
+    <style>
+        .btn-group button {
+                background-color: #4CAF50; /* Green background */
+                border: 1px solid green; /* Green border */
+                color: white; /* White text */
+                font-weight: bold;
+                padding: 10px 24px; /* Some padding */
+                cursor: pointer; /* Pointer/hand icon */
+                float: left; /* Float the buttons side by side */
+        }
+
         .button {
                 background-color: #4CAF50; /* Green background */
                 border: 1px solid green; /* Green border */
@@ -210,12 +220,19 @@ title: Math, Sonification, Plots
             to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
         }
         */
-        </style>
-
-
+    </style>
 </head>
+
+<body>
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
-    <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
+    <div><p>
+        Select High Contrast, or Standard contrast for the webpage.
+    </div></p>
+
+    <div class="btn-group">
+        <button type="button" onclick="setBG_Black()">HIGH CONTRAST</button>
+        <button type="button" onclick="setBG_White()">STRD CONTRAST</button>
+    </div>
 
     <div class="center fit myContainer">
         <img id="img_1" class="center fit myContainer" src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
@@ -304,3 +321,4 @@ title: Math, Sonification, Plots
         <br>
         <button class="vol" onclick="vol_dec()">-</button>
         <button class="ume" onclick="vol_inc()">+ VOLUME</button>
+</body>
