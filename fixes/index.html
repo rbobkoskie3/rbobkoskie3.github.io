@@ -149,11 +149,11 @@ title: Math, Sonification, Plots
                 animation-play-state:paused;
 
                 -webkit-animation-name: example;             /* Safari 4.0 - 8.0 */
-                -webkit-animation-duration: 5s;              /* Safari 4.0 - 8.0 */
+                // -webkit-animation-duration: 5s;              /* Safari 4.0 - 8.0 */
                 -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
                 -webkit-animation-direction: normal;         /* Safari 4.0 - 8.0 */
                 animation-name: example;
-                animation-duration: 5s;
+                // animation-duration: 5s;
                 animation-iteration-count: infinite;
                 animation-direction: normal;
         }
@@ -233,7 +233,9 @@ title: Math, Sonification, Plots
                 }
 
                 function play(button) {
-                        var elem = document.getElementById("myAnimation");   
+                        var elem = document.getElementById("myAnimation");
+                        var audio_len = audio.duration;
+                        elem.style.webkitAnimationPlayState = audio.duration;
                         // var pos = 75;
                         // var id = setInterval(frame, 10);
                         // var id = setTimeout(frame, 1000);
@@ -246,12 +248,12 @@ title: Math, Sonification, Plots
                                 elem.style.webkitAnimationPlayState = 'paused';
                                 // document.getElementById("myAnimation").style.top = "0px";
                                 // document.getElementById("myAnimation").style.left = "0px";
-                                elem.style.position = 'absolute';
+                                // elem.style.position = 'absolute';
                                 // elem.style.top = '0px';
                                 // elem.style.left = '0px';
                                 // elem.style.position = 'relative';
-                                elem.style.top = '0%';
-                                elem.style.left = '0%';
+                                // elem.style.top = '0%';
+                                // elem.style.left = '0%';
 
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
