@@ -256,14 +256,17 @@ title: Math, Sonification, Plots
                         var audio = document.getElementById("audio");
                         // document.getElementById("myAnimation").style.animationDuration = audio.duration + "s";
                         elem.style.animationDuration = audio.duration + "s";
+                        elem.style.webkitAnimationDuration = audio.duration + "s";
                         // var audio = document.getElementById("audio");
                         // audio.volume = 0.4;
 
                         audio.onended = function() {
                                 // elem.style.webkitAnimationPlayState = 'inherit';
                                 // elem.style.webkitAnimationPlayState = 'initial';
+                                elem.style.animationPlayState = 'paused';
                                 elem.style.webkitAnimationPlayState = 'paused';
                                 elem.style.animationIterationCount = "1";
+                                elem.style.webkitAnimationIterationCount = "1";
 
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
