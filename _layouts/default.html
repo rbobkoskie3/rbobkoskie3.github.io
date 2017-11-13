@@ -65,7 +65,19 @@
                     <button type="button" onclick="setBG_White()">STD  CONTRAST</button>
                 </div>
 
-                
+                <script>
+                    var gtech =  document.getElementById("gtech");
+                    function setBG_Black() {
+                        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+                        document.body.style.color = "yellow";
+                        gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
+                    }
+                    function setBG_White() {
+                        document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+                        document.body.style.color = "black";
+                        gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
+                    }
+                </script>
 
 		<div class="container">
 
