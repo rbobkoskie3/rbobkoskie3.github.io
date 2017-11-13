@@ -261,7 +261,12 @@ title: Math, Sonification, Plots
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
         <!-- div class="tracePlot"></div -->
         <div id ="myAnimation"></div>
-        </div>
+
+        <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
+        <button class="play" onclick="play(this)">SONIFICATION</button>
+        <br>
+        <button class="vol" onclick="vol_dec()">-</button>
+        <button class="ume" onclick="vol_inc()">+ VOLUME</button>
 
         <script>
                 var audio = document.getElementById("audio");
@@ -329,8 +334,3 @@ title: Math, Sonification, Plots
                 }
         </script>
 </body>
-        <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
-        <button class="play" onclick="play(this)">SONIFICATION</button>
-        <br>
-        <button class="vol" onclick="vol_dec()">-</button>
-        <button class="ume" onclick="vol_inc()">+ VOLUME</button>
