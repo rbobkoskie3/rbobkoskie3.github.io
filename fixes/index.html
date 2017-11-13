@@ -261,12 +261,12 @@ title: Math, Sonification, Plots
                         elem.style.webkitAnimationDuration = audio.duration + "s";
 
                         audio.onended = function() {
-                                // elem.style.webkitAnimationPlayState = 'inherit';
-                                // elem.style.webkitAnimationPlayState = 'initial';
                                 elem.style.animationPlayState = 'paused';
                                 elem.style.oAnimationPlayState = 'paused';
                                 elem.style.mozAnimationPlayState = 'paused';
                                 elem.style.webkitAnimationPlayState = 'paused';
+
+                                elem.style.left = "100px";
 
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
