@@ -1,125 +1,123 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-                        <img id ="gtech" class="center fit" src="\images\gtech.png">
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
+<html>
+	<head>
+                <img id ="gtech" class="center fit" src="\images\gtech.png">
+		<title>{{ page.title }}</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
 
-		<style>
-			div { 
-                            text-align: justify; 
-                            text-justify: inter-word; 
-                            } 
+	<style>
+		div { 
+                    text-align: justify; 
+                    text-justify: inter-word; 
+                } 
 
-                        .btn-group button {
-                            background-color: #4CAF50; /* Green background */
-                            border: 1px solid green; /* Green border */
-                            color: white; /* White text */
-                            font-weight: bold;
-			    font-size: 18px;
-                            padding: 10px 24px; /* Some padding */
-                            cursor: pointer; /* Pointer/hand icon */
-                            float: left; /* Float the buttons side by side */
-                        }
+                .btn-group button {
+                    background-color: #4CAF50; /* Green background */
+                    border: 1px solid green; /* Green border */
+                    color: white; /* White text */
+                    font-weight: bold;
+		    font-size: 18px;
+                    padding: 10px 24px; /* Some padding */
+                    cursor: pointer; /* Pointer/hand icon */
+                    float: left; /* Float the buttons side by side */
+                }
 
-                        /* Clear floats (clearfix hack) */
-                        .btn-group:after {
-                            content: "";
-                            clear: both;
-                            display: table;
-                        }
+                /* Clear floats (clearfix hack) */
+                .btn-group:after {
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
 
-                        .btn-group button:not(:last-child) {
-                            border-right: none; /* Prevent double borders */}
+                .btn-group button:not(:last-child) {
+                    border-right: none; /* Prevent double borders */}
 
-                        /* Add a background color on hover */
-                        .btn-group button:hover {
-                            background-color: #3e8e41;
-                        }
+                /* Add a background color on hover */
+                .btn-group button:hover {
+                    background-color: #3e8e41;
+                }
 
-                        .fit {  /* set relative picture size */
-                                max-width: 100%;
-                                max-height: 100%;
-                             }
+                .fit {  /* set relative picture size */
+                    max-width: 100%;
+                    max-height: 100%;
+                }
 
-                        .center {
-                                 display: block;
-                                 margin: auto;
-                                }
-                </style>
-                
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/" target="_HCS">Home</a></li>	        
-	        		<li><a href="/about" target="_HCS">Project Propositum</a></li>	        	
-	    		</ul>
-			</nav>
-			
-                        <div><p>
-                        Select High Contrast, or Standard contrast for the webpage.
-                        </div></p>
+                .center {
+                    display: block;
+                    margin: auto;
+                }
+        </style>
 
-                        <div class="btn-group">
-                            <button type="button" onclick="setBG_Black()">HIGH CONTRAST</button>
-                            <button type="button" onclick="setBG_White()">STD  CONTRAST</button>
-                        </div>
+        <body>
+		<nav><ul>
+	            <li><a href="/" target="_HCS">Home</a></li>	        
+	            <li><a href="/about" target="_HCS">Project Propositum</a></li>	        	
+	    	</ul></nav>
+	
+                <div><p>
+                    Select High Contrast, or Standard contrast for the webpage.
+                </div></p>
 
-                        <script>
-                        var gtech =  document.getElementById("gtech");
-                        var lineNeg =  document.getElementById("lineNeg");
-                        function setBG_Black() {
-                            document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
-                            document.body.style.color = "yellow";
-                            gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
-                            lineNeg.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
-                        }
-                        function setBG_White() {
-                            document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
-                            document.body.style.color = "black";
-                            gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
-                            lineNeg.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
-                        }
-                        </script>
+                <div class="btn-group">
+                    <button type="button" onclick="setBG_Black()">HIGH CONTRAST</button>
+                    <button type="button" onclick="setBG_White()">STD  CONTRAST</button>
+                </div>
 
+                <script>
+                    var gtech =  document.getElementById("gtech");
+                    var lineNeg =  document.getElementById("lineNeg");
+                    var hyperbola =  document.getElementById("hyperbola");
+                    function setBG_Black() {
+                        document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+                        document.body.style.color = "yellow";
+                        gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
+                        lineNeg.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
+                        hyperbola.src = "https://rbobkoskie3.github.io/images/HC_3D_Hyperbola.png";
+                    }
+                    function setBG_White() {
+                        document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+                        document.body.style.color = "black";
+                        gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
+                        lineNeg.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
+                        hyperbola.src = "https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png";
+                    }
+                </script>
 
-			<div class="container">
+		<div class="container">
 
-                            {{ content }}
+                    {{ content }}
 
-			</div><!-- /.container -->
-                        <br>
+		</div><!-- /.container -->
+                <br>
 
-                        <h1>Math Plots</h1>
-			<nav>
-			<ul>
-                                <li><a href="/line" target="_HCS">LINES</a></li>
-				<li><a href="/circle" target="_HCS">CIRCLES</a></li>
-				<li><a href="/parabola" target="_HCS">PARABOLAS</a></li>
-				<li><a href="/hyperbola" target="_HCS">HYPERBOLAS</a></li>
-			</ul>
-			</nav>
-			<br><br><br>
-                        
-			<footer>
-                            <ul>
-                                <p>Comments.</p>
-                                <a href="https://youtu.be/x54uVowlfMU">
-                                <img class="center fit" src="https://rbobkoskie3.github.io/images/comments.png"
-                                title="Click on Image to Enter Comments"
-                                alt="https://youtu.be/x54uVowlfMU" style="border:0;">
-                                </a>
-                                <br><br><br>
-                                
-				<p>If there are any additional feedback, enter in textbox and click "Send".</p>
-				<form action="mailto:rbobkoskie3@gatech.edu" method="GET">
-					<textarea name="body"></textarea>
-					<input type="submit" value="Send" />
-				</form>
-	        		<li><a href="https://github.com/rbobkoskie3">github.com/rbobkoskie3</a></li>
-			    </ul>
-			</footer>
-		</body>
-	</html>
+                <h1>Math Plots</h1>
+		<nav><ul>
+                    <li><a href="/line" target="_HCS">LINES</a></li>
+        	    <li><a href="/circle" target="_HCS">CIRCLES</a></li>
+        	    <li><a href="/parabola" target="_HCS">PARABOLAS</a></li>
+		    <li><a href="/hyperbola" target="_HCS">HYPERBOLAS</a></li>
+		</ul></nav>
+		<br><br><br>
+
+                <footer>
+                    <ul>
+                        <p>Comments.</p>
+                        <a href="https://youtu.be/x54uVowlfMU">
+                            <img class="center fit" src="https://rbobkoskie3.github.io/images/comments.png"
+                            title="Click on Image to Enter Comments"
+                            alt="https://youtu.be/x54uVowlfMU" style="border:0;">
+                        </a>
+                        <br><br><br>
+
+                        <p>If there are any additional feedback, enter in textbox and click "Send".</p>
+                   	<form action="mailto:rbobkoskie3@gatech.edu" method="GET">
+                            <textarea name="body"></textarea>
+                            <input type="submit" value="Send" />
+                        </form>
+                        <li><a href="https://github.com/rbobkoskie3">github.com/rbobkoskie3</a></li>
+                    </ul>
+                </footer>
+        </body>
+</html>
