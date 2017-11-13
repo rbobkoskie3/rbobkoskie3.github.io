@@ -4,22 +4,22 @@ title: Math, Sonification, Plots
 ---
 
 <head>
-        <style>
+    <style>
         div {
                 text-align: justify;
                 text-justify: inter-word;
-            }
+        }
         
         .fit {  /* set relative picture size */
                 max-width: 100%;
                 max-height: 100%;
-             }
+        }
         
         .center {
                 display: block;
                 margin: auto;
-                }
-        </style>
+        }
+    </style>
 </head>
 
 <div class="math_class">
@@ -44,14 +44,14 @@ title: Math, Sonification, Plots
         </p></div>
 
         <div><p>Click on Image to Toggle Between High Contrast <> Standard Contrast Settings for Image.</div></p>
-        <img class="center fit" src="https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png"
-             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" id="test" onclick = "change();"/>
+        <img id="hyperbola" class="center fit" src="https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png"
+             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" onclick = "change();"/>
         <script>
-                function change() {
-                        var img1 = "https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png",
-                            img2 = "https://rbobkoskie3.github.io/images/HC_3D_Hyperbola.png";
-                        var imgElement = document.getElementById('test');
-                        imgElement.src = (imgElement.src === img1)? img2 : img1;
-                }
+            function change() {
+                var img1 = "https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png",
+                    img2 = "https://rbobkoskie3.github.io/images/HC_3D_Hyperbola.png";
+                var imgElement = document.getElementById('hyperbola');
+                    imgElement.src = (imgElement.src === img1)? img2 : img1;
+            }
         </script>
 </div>
