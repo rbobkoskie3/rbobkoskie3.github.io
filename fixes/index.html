@@ -298,10 +298,10 @@ title: Math, Sonification, Plots
                         var elem = document.getElementById("myAnimation");
                         var audio = document.getElementById("audio");
                         // document.getElementById("myAnimation").style.animationDuration = audio.duration + "s";
-                        elem.style.animationDuration = audio.duration + "s";
-                        elem.style.oAnimationDuration = audio.duration + "s";
-                        elem.style.mozAnimationDuration = audio.duration + "s";
-                        elem.style.webkitAnimationDuration = audio.duration + "s";
+                        elem.style.transitionDuration = audio.duration + "s";
+                        elem.style.oTransitionDuration = audio.duration + "s";
+                        elem.style.mozTransitionDuration = audio.duration + "s";
+                        elem.style.webkitTransitionDuration = audio.duration + "s";
 
                         audio.onended = function() {
                                 elem.style.animationPlayState = 'paused';
