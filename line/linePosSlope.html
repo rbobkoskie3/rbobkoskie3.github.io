@@ -241,36 +241,36 @@ title: Math, Sonification, Plots
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <img id="line" class="center" style="width:800px;height:600px"
-         src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
+         src="https://rbobkoskie3.github.io/images/ST_Pos_Line.png"
          title="Click on Image to Toggle Between High Contrast <> Standard Contrast" onclick = "change();"/>
 
     <script>
         function change() {
-            var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png",
-                img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
-            var imgElement = document.getElementById('lineNeg');
+            var img1 = "https://rbobkoskie3.github.io/images/ST_Pos_Line.png",
+                img2 = "https://rbobkoskie3.github.io/images/HC_Pos_Line.png";
+            var imgElement = document.getElementById('line');
             imgElement.src = (imgElement.src === img1)? img2 : img1;
         }
 
         var gtech = document.getElementById("gtech");
-        var lineNeg = document.getElementById("line");
+        var line = document.getElementById("line");
         function setBG_Black() {
             document.getElementById("myAnimation").style.backgroundColor = "yellow";
             document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
             document.body.style.color = "yellow";
             gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
-            lineNeg.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
+            line.src = "https://rbobkoskie3.github.io/images/HC_Pos_Line.png";
         }
         function setBG_White() {
             document.getElementById("myAnimation").style.backgroundColor = "black";
             document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
             document.body.style.color = "black";
             gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
-            lineNeg.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
+            line.src = "https://rbobkoskie3.github.io/images/ST_Pos_Line.png";
         }
     </script>
 
-    <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
+    <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_pos.mp4"></audio>
     <!-- div class="tracePlot"></div -->
     <div id ="myAnimation"></div>
 

@@ -248,25 +248,25 @@ title: Math, Sonification, Plots
         function change() {
             var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png",
                 img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
-            var imgElement = document.getElementById('lineNeg');
+            var imgElement = document.getElementById('line');
             imgElement.src = (imgElement.src === img1)? img2 : img1;
         }
 
         var gtech = document.getElementById("gtech");
-        var lineNeg = document.getElementById("line");
+        var line = document.getElementById("line");
         function setBG_Black() {
             document.getElementById("myAnimation").style.backgroundColor = "yellow";
             document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
             document.body.style.color = "yellow";
             gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
-            lineNeg.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
+            line.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
         }
         function setBG_White() {
             document.getElementById("myAnimation").style.backgroundColor = "black";
             document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
             document.body.style.color = "black";
             gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
-            lineNeg.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
+            line.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
         }
     </script>
 
