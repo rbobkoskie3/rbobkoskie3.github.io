@@ -158,25 +158,29 @@ title: Math, Sonification, Plots
                 -o-animation-play-state:paused;
                 animation-play-state:paused;
 
-                -webkit-animation-name: tracePlt;             /* Safari 4.0 - 8.0 */
+                -webkit-animation-name: tracePlt;            /* Safari 4.0 - 8.0 */
                 -webkit-animation-duration: 5s;              /* Safari 4.0 - 8.0 */
                 -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
                 -webkit-animation-direction: normal;         /* Safari 4.0 - 8.0 */
+                -webkit-transition-timing-function: linear;  /* Safari 4.0 - 8.0 */
 
                 -moz-animation-name: tracePlt;
                 -moz-animation-duration: 5s;
                 -moz-animation-iteration-count: infinite;
                 -moz-animation-direction: normal;
+                -moz-transition-timing-function: linear;
 
                 -o-animation-name: tracePlt;
                 -o-animation-duration: 5s;
                 -o-animation-iteration-count: infinite;
                 -o-animation-direction: normal;
+                -o-transition-timing-function: linear;
 
                 animation-name: tracePlt;
                 animation-duration: 5s;
                 animation-iteration-count: infinite;
                 animation-direction: normal;
+                transition-timing-function: linear;
         }
 
         /* Safari 4.0 - 8.0 */
@@ -304,6 +308,7 @@ title: Math, Sonification, Plots
                                 elem.style.oAnimationPlayState = 'paused';
                                 elem.style.mozAnimationPlayState = 'paused';
                                 elem.style.webkitAnimationPlayState = 'paused';
+                                elem.style.transition = 'none';
 
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
