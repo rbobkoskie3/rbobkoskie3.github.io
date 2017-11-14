@@ -14,13 +14,13 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
+    background-color: yellow;
     color: #777;
 }
 a:hover {
     text-decoration: underline;
-}
-a[target=_HCS] {
-    background-color: yellow;
+    background-color: powderblue;
+    color: #444;
 }
 h1 {
     font-size: 3em;
