@@ -296,12 +296,13 @@ title: Math, Sonification, Plots
 
                 function play(button) {
                         var elem = document.getElementById("myAnimation");
+                        var newone = elem.cloneNode(true);
                         var audio = document.getElementById("audio");
                         // document.getElementById("myAnimation").style.animationDuration = audio.duration + "s";
-                        elem.style.transitionDuration = audio.duration + "s";
-                        elem.style.oTransitionDuration = audio.duration + "s";
-                        elem.style.mozTransitionDuration = audio.duration + "s";
-                        elem.style.webkitTransitionDuration = audio.duration + "s";
+                        elem.style.animationDuration = audio.duration + "s";
+                        elem.style.oAnimationDuration = audio.duration + "s";
+                        elem.style.mozAnimationDuration = audio.duration + "s";
+                        elem.style.webkitAnimationDuration = audio.duration + "s";
 
                         audio.onended = function() {
                                 elem.style.animationPlayState = 'paused';
@@ -309,6 +310,7 @@ title: Math, Sonification, Plots
                                 elem.style.mozAnimationPlayState = 'paused';
                                 elem.style.webkitAnimationPlayState = 'paused';
                                 elem.style.transition = 'none';
+                                elem.parentNode.replaceChild(newone, elem);
 
                                 // button.innerHTML = "PLAY";
                                 button.removeAttribute("class");
