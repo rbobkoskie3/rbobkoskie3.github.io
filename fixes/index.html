@@ -34,30 +34,28 @@ title: Math, Sonification, Plots
                 background-color: #3e8e41;
         }
 
-        div {
-                text-align: justify;
-                text-justify: inter-word;
+        .volDec {
+            width: 0;
+            height: 0;
+            // text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            // padding: 0px 5px;
+            margin-right: 8px;
+            border-top: 24px solid transparent;
+            border-right: 36px solid #000;
+            border-bottom: 24px solid transparent;
         }
 
-        .fit, #myContainer {  /* set relative picture size */
-                max-width: 100%;
-                max-height: 100%;
-        }
-        
-        .center {
-                display: block;
-                margin: auto;
-        }
-
-        .myContainer {
-                width: 100%;
-                height: 100%;
-                // width: 800px;
-                // height: 600px;
-                position: relative;
-                // background: url('https://rbobkoskie3.github.io/images/ST_Circle.png');
-                background-color: blue;
-                // background-color: black;
+        .volInc {
+            width: 60;
+            height: 0;
+            // text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            border-top: 24px solid transparent;
+            border-left: 36px solid #000;
+            border-bottom: 24px solid transparent;
         }
 
         .play {
@@ -106,28 +104,30 @@ title: Math, Sonification, Plots
             border-width: 0px 0px 0px 60px;
         }
 
-        .vol {
-            width: 0;
-            height: 0;
-            // text-align: left;
-            font-size: 18px;
-            font-weight: bold;
-            // padding: 0px 5px;
-            margin-right: 8px;
-            border-top: 24px solid transparent;
-            border-right: 36px solid #000;
-            border-bottom: 24px solid transparent;
+        div {
+                text-align: justify;
+                text-justify: inter-word;
         }
 
-        .ume {
-            width: 60;
-            height: 0;
-            // text-align: left;
-            font-size: 18px;
-            font-weight: bold;
-            border-top: 24px solid transparent;
-            border-left: 36px solid #000;
-            border-bottom: 24px solid transparent;
+        .fit, #myContainer {  /* set relative picture size */
+                max-width: 100%;
+                max-height: 100%;
+        }
+        
+        .center {
+                display: block;
+                margin: auto;
+        }
+
+        .myContainer {
+                width: 100%;
+                height: 100%;
+                // width: 800px;
+                // height: 600px;
+                position: relative;
+                // background: url('https://rbobkoskie3.github.io/images/ST_Circle.png');
+                background-color: blue;
+                // background-color: black;
         }
 
         #myAnimation {
@@ -154,42 +154,42 @@ title: Math, Sonification, Plots
                 -o-animation-play-state:paused;
                 animation-play-state:paused;
 
-                -webkit-animation-name: example;             /* Safari 4.0 - 8.0 */
+                -webkit-animation-name: tracePlt;             /* Safari 4.0 - 8.0 */
                 -webkit-animation-duration: 5s;              /* Safari 4.0 - 8.0 */
                 -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
                 -webkit-animation-direction: normal;         /* Safari 4.0 - 8.0 */
 
-                -moz-animation-name: example;
+                -moz-animation-name: tracePlt;
                 -moz-animation-duration: 5s;
                 -moz-animation-iteration-count: infinite;
                 -moz-animation-direction: normal;
 
-                -o-animation-name: example;
+                -o-animation-name: tracePlt;
                 -o-animation-duration: 5s;
                 -o-animation-iteration-count: infinite;
                 -o-animation-direction: normal;
 
-                animation-name: example;
+                animation-name: tracePlt;
                 animation-duration: 5s;
                 animation-iteration-count: infinite;
                 animation-direction: normal;
         }
 
         /* Safari 4.0 - 8.0 */
-        @-webkit-keyframes example {
+        @-webkit-keyframes tracePlt {
             0%   {left:20px; top:0px;}
             100% {left:790px; top:600px;}
         }
-        @-moz-keyframes example {
+        @-moz-keyframes tracePlt {
             0%   {left:20px; top:0px;}
             100% {left:790px; top:600px;}
         }
-        @-o-keyframes example {
+        @-o-keyframes tracePlt {
             0%   {left:20px; top:0px;}
             100% {left:790px; top:600px;}
         }
         /* Standard syntax */
-        @keyframes example {
+        @keyframes tracePlt {
             0%   {left:20px; top:0px;}
             100% {left:790px; top:600px;}
         }
@@ -270,8 +270,8 @@ title: Math, Sonification, Plots
     <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
     <button class="play" onclick="play(this)">SONIFICATION</button>
     <br>
-    <button class="vol" onclick="vol_dec()">-</button>
-    <button class="ume" onclick="vol_inc()">+ VOLUME</button>
+    <button class="volDec" onclick="vol_dec()">-</button>
+    <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
 
         <script>
                 var audio = document.getElementById("audio");
