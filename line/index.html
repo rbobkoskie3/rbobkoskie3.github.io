@@ -241,7 +241,7 @@ title: Math, Sonification, Plots
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div class="center fit myContainer">
-        <img id="line" class="center fit myContainer" style="width:800px;height:600px"
+        <img id="line" class="center fit myContainer"
             src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
             title="Click on Image to Toggle Between High Contrast <> Standard Contrast" onclick = "change();"/>
 
@@ -249,38 +249,38 @@ title: Math, Sonification, Plots
 
     </div>
 
-    <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
-    <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
-    <button class="play" onclick="play(this)">SONIFICATION</button>
-    <br>
-    <button class="volDec" onclick="vol_dec()">-</button>
-    <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
+        <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
+        <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
+        <button class="play" onclick="play(this)">SONIFICATION</button>
+        <br>
+        <button class="volDec" onclick="vol_dec()">-</button>
+        <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
 
-    <script>
-        function change() {
-            var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png",
-                img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
-            var imgElement = document.getElementById('line');
-            imgElement.src = (imgElement.src === img1)? img2 : img1;
-        }
+        <script>
+            function change() {
+                var img1 = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png",
+                    img2 = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
+                var imgElement = document.getElementById('line');
+                imgElement.src = (imgElement.src === img1)? img2 : img1;
+            }
 
-        var gtech = document.getElementById("gtech");
-        var line = document.getElementById("line");
-        function setBG_Black() {
-            document.getElementById("myAnimation").style.backgroundColor = "yellow";
-            document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
-            document.body.style.color = "yellow";
-            gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
-            line.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
-        }
-        function setBG_White() {
-            document.getElementById("myAnimation").style.backgroundColor = "black";
-            document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
-            document.body.style.color = "black";
-            gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
-            line.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
-        }
-    </script>
+            var gtech = document.getElementById("gtech");
+            var line = document.getElementById("line");
+            function setBG_Black() {
+                document.getElementById("myAnimation").style.backgroundColor = "yellow";
+                document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+                document.body.style.color = "yellow";
+                gtech.src = "https://rbobkoskie3.github.io/images/gtech_HCS.png";
+                line.src = "https://rbobkoskie3.github.io/images/HC_Neg_Line.png";
+            }
+            function setBG_White() {
+                document.getElementById("myAnimation").style.backgroundColor = "black";
+                document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+                document.body.style.color = "black";
+                gtech.src = "https://rbobkoskie3.github.io/images/gtech.png";
+                line.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
+            }
+        </script>
 
         <script>
                 var audio = document.getElementById("audio");
