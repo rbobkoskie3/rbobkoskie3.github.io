@@ -163,7 +163,6 @@ title: Math, Sonification, Plots
                 -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
                 -webkit-animation-direction: normal;         /* Safari 4.0 - 8.0 */
                 -webkit-transition-timing-function: linear;  /* Safari 4.0 - 8.0 */
-                -webkit-transition-timing-function: cubic-bezier(1,0,0,1);
 
                 -moz-animation-name: tracePlt;
                 -moz-animation-duration: 5s;
@@ -181,8 +180,8 @@ title: Math, Sonification, Plots
                 animation-duration: 5s;
                 animation-iteration-count: infinite;
                 animation-direction: normal;
-                // transition-timing-function: linear;
-                transition-timing-function: cubic-bezier(1,0,0,1);
+                transition-timing-function: linear;
+                // transition-timing-function: cubic-bezier(1,0,0,1);
                 // transition-timing-function: ease;
         }
 
@@ -202,8 +201,8 @@ title: Math, Sonification, Plots
         /* Standard syntax */
         @keyframes tracePlt {
             0%   {left:17%; top:80%;}
-            40%  {left:37%; top:30%;}
-            60%  {transform: rotate(-110deg) translateX(150px) translateY(150px) rotate(110deg);}
+            40%  {left:37%; top:10%;}
+            60%  {transform: rotate(-110deg) translateX(60%) translateY(5%) rotate(110deg);}
             100% {left:80%; top:80%;}
         }
 
