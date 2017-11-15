@@ -113,7 +113,7 @@ title: Math, Sonification, Plots
                 text-justify: inter-word;
         }
 
-        .fit, #myContainer {  /* set relative picture size */
+        .fit {  /* set relative picture size */
                 max-width: 100%;
                 max-height: 100%;
         }
@@ -240,9 +240,20 @@ title: Math, Sonification, Plots
     </ul></nav>
 
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
-    <img id="line" class="center" style="width:800px;height:600px"
-         src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
-         title="Click on Image to Toggle Between High Contrast <> Standard Contrast" onclick = "change();"/>
+    <div class="center fit myContainer">
+        <img id="line" class="center fit myContainer" style="width:800px;height:600px"
+            src="https://rbobkoskie3.github.io/images/ST_Neg_Line.png"
+            title="Click on Image to Toggle Between High Contrast <> Standard Contrast" onclick = "change();"/>
+
+        <div id ="myAnimation"></div>
+
+        <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
+        <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
+        <button class="play" onclick="play(this)">SONIFICATION</button>
+        <br>
+        <button class="volDec" onclick="vol_dec()">-</button>
+        <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
+    </div>
 
     <script>
         function change() {
@@ -269,16 +280,6 @@ title: Math, Sonification, Plots
             line.src = "https://rbobkoskie3.github.io/images/ST_Neg_Line.png";
         }
     </script>
-
-    <audio id="audio" src="https://rbobkoskie3.github.io/sounds/line_neg.mp4"></audio>
-    <!-- div class="tracePlot"></div -->
-    <div id ="myAnimation"></div>
-
-    <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
-    <button class="play" onclick="play(this)">SONIFICATION</button>
-    <br>
-    <button class="volDec" onclick="vol_dec()">-</button>
-    <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
 
         <script>
                 var audio = document.getElementById("audio");
