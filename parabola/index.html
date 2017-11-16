@@ -200,14 +200,15 @@ title: Math, Sonification, Plots
         }
         /* Standard syntax */
         @keyframes tracePlt {
-            0%   {left:17%; top:80%;}
-            // 25%  {left:37%; top:20%;}
-            // 50%  {transform: rotate(50deg) translate(20px, 10px);}
-            // 75%  {transform: rotate(70deg) translate(20px, -10px);}
-            25%  {left:35%; top:30%;}
-            50%  {transform: rotate(-60deg) translateX(120px) translateY(40px) rotate(60deg);}
-            75%  {transform: rotate(120deg) translateX(120px) translateY(40px) rotate(-120deg);}
-            100% {left:80%; top:80%;}
+            // 0%   {left:17%; top:80%;}
+            // 25%  {left:35%; top:30%;}
+            // 50%  {transform: rotate(-60deg) translateX(120px) translateY(40px) rotate(60deg);}
+            // 75%  {transform: rotate(120deg) translateX(120px) translateY(40px) rotate(-120deg);}
+            // 100% {left:80%; top:80%;}
+
+            0%   { transform: scale(0.0); animation-timing-function: cubic-bezier(0.33333, 0.66667, 0.66667, 1) }
+            70%  { transform: scale(1.2); animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333) }
+            100% { transform: scale(1.0) }
         }
 
         /*
