@@ -9,11 +9,20 @@ title: Math, Sonification, Plots
                     background-color: #4CAF50; /* Green background */
                     border: 1px solid green; /* Green border */
                     color: white; /* White text */
-                    font-weight: bold;
-		    font-size: 12px;
-                    padding: 6px 12px; /* Some padding */
                     cursor: pointer; /* Pointer/hand icon */
-                    float: left; /* Float the buttons side by side */
+        }
+
+        .buttonFig {
+                background-color: #4CAF50; /* Green background */
+                border: 1px solid green; /* Green border */
+                color: white; /* White text */
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-weight: bold;
+		font-size: 12px;
+                padding: 6px 12px; /* Some padding */
+                cursor: pointer;
         }
 
         .button {
@@ -234,8 +243,11 @@ title: Math, Sonification, Plots
 
 <body>
     <br><br>
-    <a href="/line/linePosSlope.html" class="myFigs">POS SLOPE</a>
-    <a href="/line/lineZeroSlope.html" class="myFigs">ZERO SLOPE</a>
+    <div class="myFigs">
+        <a href="/line/linePosSlope.html" class="buttonFig">POS SLOPE</a>
+        <a href="/line/lineZeroSlope.html" class="buttonFig">ZERO SLOPE</a>
+    </div>
+
     <nav><ul>
         <li><a href="/line" target="_self">NEG SLOPE</a></li>
         <li><a href="/line/linePosSlope.html" target="_self">POS SLOPE</a></li>
