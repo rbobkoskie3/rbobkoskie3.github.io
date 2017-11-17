@@ -251,7 +251,7 @@ title: Math, Sonification, Plots
         <img id="line" class="center fit myContainer"
             src="https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png"
             title="Click on Image to Toggle Between High Contrast <> Standard Contrast"
-            onclick = "change(); play(this);"/>
+            onclick = "change(); play(document.getElementById("playButton"));"/>
 
         <div id ="myAnimation"></div>
 
@@ -259,7 +259,7 @@ title: Math, Sonification, Plots
 
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/hyperbola.mp4"></audio>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
-        <button class="play" onclick="play(this)">SONIFICATION</button>
+        <button id="playButton" class="play" onclick="play(this)">SONIFICATION</button>
         <br>
         <button class="volDec" onclick="vol_dec()">-</button>
         <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
