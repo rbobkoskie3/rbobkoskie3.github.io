@@ -228,8 +228,11 @@ title: Math, Sonification, Plots
         }
         /* Standard syntax */
         @keyframes tracePlt {
-            from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-            to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+            0%    {left:50%; top:15%;}
+            25%   {rotate(90deg);   left:75%; top:30%; rotate(-90deg);}
+            50%   {rotate(180deg);  left:50%; top:60%; rotate(-180deg);}
+            75%   {rotate(270deg);  left:25%; top:30%; rotate(-270deg);}
+            100%  {rotate(360deg);  left:50%; top:15%; rotate(-360deg);}
         }
 
         /*
