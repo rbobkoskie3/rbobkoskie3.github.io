@@ -248,10 +248,11 @@ title: Math, Sonification, Plots
     <br><br>
     <!-- img src="\images\ST_Circle.png" title="Graph of a Circle w/o High Contrast" -->
     <div class="center fit myContainer">
+        var playButton = document.getElementById("playButton")
         <img id="line" class="center fit myContainer"
             src="https://rbobkoskie3.github.io/images/ST_3D_Hyperbola.png"
             title="Click on Image to Toggle Between High Contrast <> Standard Contrast"
-            onclick = "change(); play(document.getElementById("playButton"));"/>
+            onclick = "change(); play(playButton);"/>
 
         <div id ="myAnimation"></div>
 
