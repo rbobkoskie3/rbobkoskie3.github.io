@@ -311,16 +311,20 @@ title: Math, Sonification, Plots
         <audio id="audio" src="https://rbobkoskie3.github.io/sounds/hyperbola.mp4"></audio>
         <!-- input type="button" class="button" value="SONIFICATION" onclick="play()" -->
         <div class="w3-cell-row">
-            <div class="w3-container w3-cell">
+            <div class="w3-container w3-red w3-cell">
                 <button id="playButton" class="play" onclick="play(this)">SONIFICATION</button>
                 <br>
                 <button class="volDec" onclick="vol_dec()">-</button>
                 <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
             </div>
-            <div class="w3-container w3-cell">
-                <p>
-                    !ALERT!
-                </p>
+            <div class="w3-container w3-red w3-cell">
+                <div><p>
+                    !ALERT! Sonification uses sound: frequency, amplitude and timbre to convey 
+                    information. It is advisable to adjust the volume on your device prior to 
+                    playing the sonification for the plots. You can also adjust the volume
+                    during play, either from your device, or the volume buttons for this application.
+                    Note that the native browser on iPhone does not support volume control from the application.
+                </p></div>
             </div>
         </div>
 
