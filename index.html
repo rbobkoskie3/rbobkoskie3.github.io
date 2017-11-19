@@ -130,7 +130,7 @@ title: Math, Sonification, Plots
                 // height: 600px;
                 position: relative;
                 // background: url('https://rbobkoskie3.github.io/images/ST_Circle.png');
-                background-color: blue;
+                // background-color: blue;
                 // background-color: black;
         }
 
@@ -269,15 +269,27 @@ title: Math, Sonification, Plots
         */
 
         .floatButton {
-            width:30%;
-            height:400px;
+            width: 100%;
+            height: 100%;
+            // width: 800px;
+            // height: 600px;
+            // width:30%;
+            // height:400px;
             float:left;
+            position: relative;
+            background-color: red;
         }
 
         floatWarning {
-            width:70%;
-            height:400px;
-            float:left;
+            width: 100%;
+            height: 100%;
+            // width: 800px;
+            // height: 600px;
+            // width:70%;
+            // height:400px;
+            float:right;
+            position: relative;
+            background-color: red;
         }
     </style>
 </head>
@@ -328,17 +340,15 @@ title: Math, Sonification, Plots
             <button class="volDec" onclick="vol_dec()">-</button>
             <button class="volInc" onclick="vol_inc()">+ VOLUME</button>
         </div>
-        <div><p>
-            <div class="floatWarning">
-                <div><p>
-                    !ALERT! Sonification uses sound: frequency, amplitude and timbre to convey 
-                    information. It is advisable to adjust the volume on your device prior to 
-                    playing the sonification for the plots. You can also adjust the volume
-                    during play, either from your device, or the volume buttons for this application.
-                    Note that the native browser on iPhone does not support volume control from the application.
-                </p></div>
-            </div>
-        </p></div>
+        <div class="floatWarning">
+            <div><p>
+                !ALERT! Sonification uses sound: frequency, amplitude and timbre to convey 
+                information. It is advisable to adjust the volume on your device prior to 
+                playing the sonification for the plots. You can also adjust the volume
+                during play, either from your device, or the volume buttons for this application.
+                Note that the native browser on iPhone does not support volume control from the application.
+            </p></div>
+        </div>
 
         <script>
             var playButton = document.getElementById("playButton")
