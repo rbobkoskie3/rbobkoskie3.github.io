@@ -188,57 +188,90 @@ title: Math, Sonification, Plots
 
         /* Safari 4.0 - 8.0 */
         @-webkit-keyframes tracePlt {
-            0%    {left:50%; top:15%;}
-            10%   {rotate(10deg);  left:74%; top:24%; rotate(-10deg);}
-            20%   {rotate(170deg); left:28%; top:30%; rotate(-170deg);}
-            30%   {rotate(10deg);  left:62%; top:36%; rotate(-10deg);}
-            40%   {rotate(170deg); left:44%; top:42%; rotate(-170deg);}
-            50%   {rotate(10deg);  left:54%; top:48%; rotate(-10deg);}
-            60%   {rotate(170deg); left:42%; top:54%; rotate(-170deg);}
-            70%   {rotate(10deg);  left:63%; top:58%; rotate(-10deg);}
-            80%   {rotate(170deg); left:32%; top:64%; rotate(-170deg);}
-            90%   {rotate(10deg);  left:72%; top:70%; rotate(-10deg);}
-            100%  {rotate(170deg); left:29%; top:76%; rotate(-170deg);}
+            10%  {rotate(10deg);  left:74%; top:24%; rotate(-10deg);  -webkit-transform:scale(1.5);}
+            15%  {top:35%; -webkit-transform:scale(3.0);}
+            20%  {rotate(170deg); left:28%; top:30%; rotate(-170deg); -webkit-transform:scale(1.5);}
+            25%  {-webkit-transform:scale(0.5);}
+            30%  {rotate(10deg);  left:62%; top:36%; rotate(-10deg);  -webkit-transform:scale(1.5);}
+            35%  {-webkit-transform:scale(2.0);}
+            40%  {rotate(170deg); left:44%; top:42%; rotate(-170deg); -webkit-transform:scale(1.5);}
+            45%  {-webkit-transform:scale(0.75);}
+            50%  {rotate(10deg);  left:54%; top:48%; rotate(-10deg);  -webkit-transform:scale(1.5);}
+            55%  {-webkit-transform:scale(2.0);}
+            60%  {rotate(170deg); left:42%; top:54%; rotate(-170deg); -webkit-transform:scale(1.5);}
+            65%  {-webkit-transform:scale(0.75);}
+            70%  {rotate(10deg);  left:63%; top:58%; rotate(-10deg);  -webkit-transform:scale(1.5);}
+            75%  {-webkit-transform:scale(3.0);}
+            80%  {rotate(170deg); left:32%; top:64%; rotate(-170deg); -webkit-transform:scale(1.5);}
+            85%  {-webkit-transform:scale(0.5);}
+            90%  {rotate(10deg);  left:72%; top:70%; rotate(-10deg);  -webkit-transform:scale(1.5);}
+            95%  {-webkit-transform:scale(3.5);}
+            100% {rotate(170deg); left:29%; top:76%; rotate(-170deg); -webkit-transform:scale(1.0);}
         }
         @-moz-keyframes tracePlt {
-            0%    {left:50%; top:15%;}
-            10%   {rotate(10deg);  left:74%; top:24%; rotate(-10deg);}
-            20%   {rotate(170deg); left:28%; top:30%; rotate(-170deg);}
-            30%   {rotate(10deg);  left:62%; top:36%; rotate(-10deg);}
-            40%   {rotate(170deg); left:44%; top:42%; rotate(-170deg);}
-            50%   {rotate(10deg);  left:54%; top:48%; rotate(-10deg);}
-            60%   {rotate(170deg); left:42%; top:54%; rotate(-170deg);}
-            70%   {rotate(10deg);  left:63%; top:58%; rotate(-10deg);}
-            80%   {rotate(170deg); left:32%; top:64%; rotate(-170deg);}
-            90%   {rotate(10deg);  left:72%; top:70%; rotate(-10deg);}
-            100%  {rotate(170deg); left:29%; top:76%; rotate(-170deg);}
+            10%  {rotate(10deg);  left:74%; top:24%; rotate(-10deg);  -moz-transform:scale(1.5);}
+            15%  {top:35%; -moz-transform:scale(3.0);}
+            20%  {rotate(170deg); left:28%; top:30%; rotate(-170deg); -moz-transform:scale(1.5);}
+            25%  {-moz-transform:scale(0.5);}
+            30%  {rotate(10deg);  left:62%; top:36%; rotate(-10deg);  -moz-transform:scale(1.5);}
+            35%  {-moz-transform:scale(2.0);}
+            40%  {rotate(170deg); left:44%; top:42%; rotate(-170deg); -moz-transform:scale(1.5);}
+            45%  {-moz-transform:scale(0.75);}
+            50%  {rotate(10deg);  left:54%; top:48%; rotate(-10deg);  -moz-transform:scale(1.5);}
+            55%  {-moz-transform:scale(2.0);}
+            60%  {rotate(170deg); left:42%; top:54%; rotate(-170deg); -moz-transform:scale(1.5);}
+            65%  {-moz-transform:scale(0.75);}
+            70%  {rotate(10deg);  left:63%; top:58%; rotate(-10deg);  -moz-transform:scale(1.5);}
+            75%  {-moz-transform:scale(3.0);}
+            80%  {rotate(170deg); left:32%; top:64%; rotate(-170deg); -moz-transform:scale(1.5);}
+            85%  {-moz-transform:scale(0.5);}
+            90%  {rotate(10deg);  left:72%; top:70%; rotate(-10deg);  -moz-transform:scale(1.5);}
+            95%  {-moz-transform:scale(3.5);}
+            100% {rotate(170deg); left:29%; top:76%; rotate(-170deg); -moz-transform:scale(1.0);}
         }
         @-o-keyframes tracePlt {
-            0%    {left:50%; top:15%;}
-            10%   {rotate(10deg);  left:74%; top:24%; rotate(-10deg);}
-            20%   {rotate(170deg); left:28%; top:30%; rotate(-170deg);}
-            30%   {rotate(10deg);  left:62%; top:36%; rotate(-10deg);}
-            40%   {rotate(170deg); left:44%; top:42%; rotate(-170deg);}
-            50%   {rotate(10deg);  left:54%; top:48%; rotate(-10deg);}
-            60%   {rotate(170deg); left:42%; top:54%; rotate(-170deg);}
-            70%   {rotate(10deg);  left:63%; top:58%; rotate(-10deg);}
-            80%   {rotate(170deg); left:32%; top:64%; rotate(-170deg);}
-            90%   {rotate(10deg);  left:72%; top:70%; rotate(-10deg);}
-            100%  {rotate(170deg); left:29%; top:76%; rotate(-170deg);}
+            10%  {rotate(10deg);  left:74%; top:24%; rotate(-10deg);  -o-transform:scale(1.5);}
+            15%  {top:35%; -o-transform:scale(3.0);}
+            20%  {rotate(170deg); left:28%; top:30%; rotate(-170deg); -o-transform:scale(1.5);}
+            25%  {-o-transform:scale(0.5);}
+            30%  {rotate(10deg);  left:62%; top:36%; rotate(-10deg);  -o-transform:scale(1.5);}
+            35%  {-o-transform:scale(2.0);}
+            40%  {rotate(170deg); left:44%; top:42%; rotate(-170deg); -o-transform:scale(1.5);}
+            45%  {-o-transform:scale(0.75);}
+            50%  {rotate(10deg);  left:54%; top:48%; rotate(-10deg);  -o-transform:scale(1.5);}
+            55%  {-o-transform:scale(2.0);}
+            60%  {rotate(170deg); left:42%; top:54%; rotate(-170deg); -o-transform:scale(1.5);}
+            65%  {-o-transform:scale(0.75);}
+            70%  {rotate(10deg);  left:63%; top:58%; rotate(-10deg);  -o-transform:scale(1.5);}
+            75%  {-o-transform:scale(3.0);}
+            80%  {rotate(170deg); left:32%; top:64%; rotate(-170deg); -o-transform:scale(1.5);}
+            85%  {-o-transform:scale(0.5);}
+            90%  {rotate(10deg);  left:72%; top:70%; rotate(-10deg);  -o-transform:scale(1.5);}
+            95%  {-o-transform:scale(3.5);}
+            100% {rotate(170deg); left:29%; top:76%; rotate(-170deg); -o-transform:scale(1.0);}
         }
         /* Standard syntax */
         @keyframes tracePlt {
-            0%    {left:50%; top:15%;}
-            10%   {rotate(10deg);  left:74%; top:24%; rotate(-10deg);}
-            20%   {rotate(170deg); left:28%; top:30%; rotate(-170deg);}
-            30%   {rotate(10deg);  left:62%; top:36%; rotate(-10deg);}
-            40%   {rotate(170deg); left:44%; top:42%; rotate(-170deg);}
-            50%   {rotate(10deg);  left:54%; top:48%; rotate(-10deg);}
-            60%   {rotate(170deg); left:42%; top:54%; rotate(-170deg);}
-            70%   {rotate(10deg);  left:63%; top:58%; rotate(-10deg);}
-            80%   {rotate(170deg); left:32%; top:64%; rotate(-170deg);}
-            90%   {rotate(10deg);  left:72%; top:70%; rotate(-10deg);}
-            100%  {rotate(170deg); left:29%; top:76%; rotate(-170deg);}
+            0%   {left:50%; top:15%;}
+            10%  {rotate(10deg);  left:74%; top:24%; rotate(-10deg);  transform:scale(1.5);}
+            15%  {top:35%; transform:scale(3.0);}
+            20%  {rotate(170deg); left:28%; top:30%; rotate(-170deg); transform:scale(1.5);}
+            25%  {transform:scale(0.5);}
+            30%  {rotate(10deg);  left:62%; top:36%; rotate(-10deg);  transform:scale(1.5);}
+            35%  {transform:scale(2.0);}
+            40%  {rotate(170deg); left:44%; top:42%; rotate(-170deg); transform:scale(1.5);}
+            45%  {transform:scale(0.75);}
+            50%  {rotate(10deg);  left:54%; top:48%; rotate(-10deg);  transform:scale(1.5);}
+            55%  {transform:scale(2.0);}
+            60%  {rotate(170deg); left:42%; top:54%; rotate(-170deg); transform:scale(1.5);}
+            65%  {transform:scale(0.75);}
+            70%  {rotate(10deg);  left:63%; top:58%; rotate(-10deg);  transform:scale(1.5);}
+            75%  {transform:scale(3.0);}
+            80%  {rotate(170deg); left:32%; top:64%; rotate(-170deg); transform:scale(1.5);}
+            85%  {transform:scale(0.5);}
+            90%  {rotate(10deg);  left:72%; top:70%; rotate(-10deg);  transform:scale(1.5);}
+            95%  {transform:scale(3.5);}
+            100% {rotate(170deg); left:29%; top:76%; rotate(-170deg); transform:scale(1.0);}
         }
 
         /*
